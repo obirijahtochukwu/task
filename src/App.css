@@ -1,11 +1,16 @@
 body {
   background-color: rgb(150, 3, 3);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
+  width: 80vw;
   background-color: white;
   border-radius: 15px;
   text-align: center;
   padding: 10px;
-  margin: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
