@@ -1,0 +1,18 @@
+body {
+  background-color: #f5f5f5;
+  font-family: poppins;
+}
+
+.primary_color {
+  color: #4897d8 !important;
+}
+
+.primary_bg_color {
+  color: #4897d8 !important;
+}
+
+.primary_text {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 500;
+}

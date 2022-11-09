@@ -1,16 +1,31 @@
 body {
-  background-color: rgb(150, 3, 3);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+  background-color: #f1fcff;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
-.card {
-  width: 80vw;
-  background-color: white;
-  border-radius: 15px;
-  text-align: center;
-  padding: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.primary_color {
+  color: #4897d8;
+}
+
+.black {
+  color: rgba(0, 0, 0, 1) !important;
+}
+.white {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.primary_bg_color {
+  background-color: #4897d8 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.primary_text {
+  color: #333333;
+  font-size: 21px;
+  font-weight: 700;
 }
