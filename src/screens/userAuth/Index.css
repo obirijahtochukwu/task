@@ -1,0 +1,25 @@
+.login_input {
+  border-radius: 6px;
+  border: 1px solid rgba(134, 146, 166, 1);
+  width: 100%;
+}
+
+.show_password {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(124, 146, 166, 1);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin: 6px 6px 6px 0;
+}
+
+.form-control {
+  width: 100% !important;
+  padding: 20px 0;
+}

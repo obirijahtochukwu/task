@@ -1,6 +1,10 @@
+import { Navigate } from "react-router-dom";
 import "./Index.css";
+import { useGlobalContext } from "../../context";
 
 export default function Index(params) {
+  const user = useGlobalContext();
+
   const cards = [
     {
       text: "align-items-center",
@@ -71,6 +75,10 @@ export default function Index(params) {
     { icon: "image 38 (3).png", text: "High Tech" },
     { icon: "image 38 (4).png", text: "Health" },
   ];
+
+  if (!user.email) {
+    return <Navigate to="/login" replace="true" />;
+  }
 
   return (
     <article>
