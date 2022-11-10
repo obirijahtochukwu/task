@@ -9,31 +9,29 @@
   left: 0;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
+  transform: translate(-100%);
 }
 
 .sidebar.show {
   visibility: visible;
+  transform: translate(0%);
 }
 
 .sidebar_content {
-  height: 60vh;
-  width: 0;
+  height: 100vh;
+  width: 80vw;
+  overflow-y: auto;
   overflow: hidden;
-  background-color: #f1fcff;
-  border-radius: 0 15px 15px 0;
+  background-color: #4897d8;
   box-shadow: 70px 20px 70px 120px rgba(0, 0, 0, 0.2);
-}
-
-.sidebar_content.true {
-  width: 70vw;
-  transition: all 0.5s ease-in-out;
 }
 
 .closebar {
   cursor: pointer;
   position: absolute;
   z-index: 100;
-  top: 12%;
-  right: 15%;
+  color: rgb(255, 0, 191) !important;
+  top: 1%;
+  right: 1rem;
   font-size: 4rem;
 }

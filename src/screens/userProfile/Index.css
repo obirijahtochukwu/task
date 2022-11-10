@@ -1,0 +1,36 @@
+.check_box {
+  position: relative;
+  padding: 0.9rem;
+  width: 60px;
+  background: #c5e5ff;
+  border: 2px solid #c4c4c4;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.check_box.true {
+  background: #c5e5ff;
+  border: 2px solid #76abd7;
+}
+.box {
+  position: absolute;
+  width: 15px;
+  padding: 0.8rem;
+  top: 2px;
+  left: 0.1rem;
+  border-radius: 100%;
+  background: #c4c4c4;
+  transition: all 0.4s ease-in-out;
+}
+
+.boxtrue {
+  position: absolute;
+  width: 15px;
+  padding: 0.8rem;
+  top: 2px;
+  right: 0.1rem;
+  border-radius: 100%;
+  background: #4897d8;
+  transition: all 0.4s ease-in-out;
+}

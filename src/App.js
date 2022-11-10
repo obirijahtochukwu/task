@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -8,7 +9,7 @@ import Sidebar from "./navigation/Sidebar";
 import Login from "./screens/userAuth/Login";
 import Signup from "./screens/userAuth/Signup";
 import CreateAccount from "./screens/recruiter/CreateAccount";
-import { useEffect } from "react";
+import UserProfile from "./screens/userProfile/Index";
 
 function App() {
   const user = useGlobalContext();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createAccount" element={<CreateAccount />} />
+        <Route path="/user-profile" element={<UserProfile />} />
       </Routes>
     </div>
   );

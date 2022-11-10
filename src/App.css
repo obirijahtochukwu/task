@@ -18,7 +18,7 @@ button {
 }
 
 .primary_color {
-  color: #4897d8;
+  color: #4897d8 !important;
 }
 
 .black {
@@ -40,4 +40,18 @@ button {
   color: #333333;
   font-size: 21px;
   font-weight: 700;
+}
+
+.link {
+  text-decoration: none !important;
+}
+@media (min-width: 576px) {
+  .margin {
+    margin-left: 30% !important;
+  }
+}
+@media (min-width: 993px) {
+  .margin {
+    margin-left: 20% !important;
+  }
 }
