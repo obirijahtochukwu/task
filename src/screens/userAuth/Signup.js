@@ -8,19 +8,29 @@ import "./Index.css";
 export default function Signup() {
   const user = useGlobalContext();
   const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [address, setAddress] = useState("");
+  // eslint-disable-next-line
+  const [type, setType] = useState("sales");
 
   const login = (e) => {
-    e.preventDefault();
-    localStorage.setItem("email", JSON.stringify(email));
-    user.setEmail(email);
+    const data = { name, phone, email, address, password, type };
+    localStorage.setItem("auth", JSON.stringify(data));
+    user.setData(data);
+    setName("");
+    setEmail("");
+    setPhone("");
     setEmail("");
     setPassword("");
+    setAddress("");
+    console.log(data);
   };
 
-  if (user.email) {
-    return <Navigate to="/" replace="true" />;
+  if (user.data.type === "sales") {
+    return <Navigate to="/user-profile" replace="true" />;
   }
 
   return (
@@ -89,6 +99,8 @@ export default function Signup() {
               Your full name*
             </div>
             <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder="Your full name"
               style={{
@@ -126,10 +138,9 @@ export default function Signup() {
               Phone number*
             </div>
             <PhoneInput
-              containerStyle={{ pointerEvents: "none" }}
-              country={"us"}
-              value={"this.state.phone"}
-              onChange={(phone) => this.setState({ phone })}
+              country="us"
+              value={phone}
+              onChange={() => setPhone(phone)}
             />
             <div
               style={{ fontSize: "1rem", fontWeight: "500" }}
@@ -165,6 +176,8 @@ export default function Signup() {
               Address*
             </div>
             <input
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
               type="text"
               placeholder="Address"
               style={{

@@ -13,6 +13,12 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
 }
+.active {
+  border-right: 1rem solid rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+}
 
 @media (max-width: 992px) {
   .nav_margin {

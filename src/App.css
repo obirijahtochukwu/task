@@ -9,6 +9,14 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.overflow::-webkit-scrollbar {
+  display: none;
+}
+textarea {
+  outline: unset !important;
+  text-transform: capitalize;
+}
+
 input {
   outline: unset !important;
 }
@@ -54,4 +62,10 @@ button {
   .margin {
     margin-left: 20% !important;
   }
+}
+
+.hr_line {
+  width: 100%;
+  padding: 0.015rem;
+  background-color: #333333;
 }

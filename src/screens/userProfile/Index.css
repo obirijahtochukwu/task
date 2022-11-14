@@ -34,3 +34,27 @@
   background: #4897d8;
   transition: all 0.4s ease-in-out;
 }
+
+/* JOB SEARCH SECTION */
+.job_search {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #f1fcff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.job_earch::-webkit-scrollbar {
+  display: none;
+}
+
+.job_img {
+  position: inherit;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+}

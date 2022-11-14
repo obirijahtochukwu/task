@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import "./Index.css";
 import { useGlobalContext } from "../../context";
 
@@ -97,9 +97,10 @@ export default function Index(params) {
               a sales position within your company.
             </div>
             <div className="d-sm-flex d-block align-items-center my-3">
-              <div
+              <Link
+                to="/createaccount"
                 style={{ border: "0.1rem solid #4897d8", width: "fit-content" }}
-                className="primary_bg_color px-2 py-2 rounded my-2 d-flex align-items-center text-white"
+                className="primary_bg_color px-2 py-2 rounded my-2 d-flex align-items-center text-white link"
               >
                 <img src="searc 1.png" width="40px" alt="" />
                 <div
@@ -108,16 +109,17 @@ export default function Index(params) {
                 >
                   Create sales job
                 </div>
-              </div>
-              <div
+              </Link>
+              <Link
+                to="/signup"
                 style={{ border: "0.1rem solid #4897d8", width: "fit-content" }}
-                className="rounded d-flex cursor-pointer px-2 py-2 mx-sm-2 align-items-center primary_color"
+                className="rounded d-flex cursor-pointer px-2 py-2 mx-sm-2 align-items-center primary_color link"
               >
                 <img src="image 13.png" width="40px" alt="" />
                 <div style={{ fontSize: "1rem", fontWeight: "500" }}>
                   Find sales job
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="col-12 col-md-5 col-lg-6 mx-auto">
@@ -319,7 +321,7 @@ export default function Index(params) {
             <h4 className=" mb-2">Contact us</h4>
             <div
               className="black"
-              style={{ fontSize: "0.8rem", fontWeight: "300" }}
+              style={{ fontSize: "0.8rem", fontWeight: "400" }}
             >
               Our customer service representatives are available to answers any
               questions or concerns during [work hours] at [phone number/email
@@ -330,7 +332,7 @@ export default function Index(params) {
             <h4 className="mb-2 mt-3 mt-lg-0">About us</h4>
             <div
               className="black"
-              style={{ fontSize: "0.8rem", fontWeight: "300" }}
+              style={{ fontSize: "0.8rem", fontWeight: "400" }}
             >
               Every sales position is distinctive, as is every salesperson has
               their own unique training and experience. Natural Closers is
@@ -342,7 +344,8 @@ export default function Index(params) {
             <h4 className="mb-2 mt-3 mt-lg-0">Join our community us</h4>
             <div className="d-sm-flex d-block align-items-stretch">
               <input
-                className="py-2 px-1 rounded"
+                style={{ border: "1px solid #000000" }}
+                className="py-2 px-2 rounded"
                 type="email"
                 name=""
                 placeholder="Enter your email..."
@@ -359,6 +362,12 @@ export default function Index(params) {
                   Subscribe
                 </div>
               </div>
+            </div>
+            <div
+              style={{ fontSize: "12px", fontWeight: "400" }}
+              className="black my-4"
+            >
+              By subscribing you agree to with our Privacy Policy
             </div>
           </div>
         </div>

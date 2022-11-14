@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { FaChevronDown, FaEye, FaUpload } from "react-icons/fa";
-import "./Index.css";
+import { FaChevronDown, FaPen } from "react-icons/fa";
 
-export default function Index() {
+function Index() {
   const [checked, setChecked] = useState(true);
   const [check, setCheck] = useState(false);
+  // eslint-disable-next-line
+  const [job, setJob] = useState(false);
 
   return (
     <div className="margin ">
-      <div className={` container-fluid bg-white py-5`}>
+      <div className={`${job && "d-none"} container-fluid bg-white py-4`}>
         <div className="d-flex justify-content-between align-items-center">
           <div
             style={{ fontSize: "1.87rem", fontWeight: "700" }}
@@ -16,31 +17,16 @@ export default function Index() {
           >
             Account info
           </div>
-          <div className="d-flex align-items-between">
-            <div className="rounded cursor-pointer primary_bg_color mx-2">
-              <div className="d-flex align-items-center text-white px-2 py-2">
-                <div>
-                  <FaEye className="mx-2" />{" "}
-                </div>
-                <div
-                  className="d-none d-md-block"
-                  style={{ fontSize: "0.87rem", fontWeight: "500" }}
-                >
-                  My Resume
-                </div>
+          <div className="rounded cursor-pointer primary_bg_color mx-2">
+            <div className="d-flex align-items-center text-white px-2 py-2">
+              <div>
+                <FaPen className="mx-2" />{" "}
               </div>
-            </div>
-            <div className="rounded cursor-pointer primary_bg_color">
-              <div className="d-flex align-items-center text-white px-2 py-2">
-                <div>
-                  <FaUpload className="mx-2" />{" "}
-                </div>
-                <div
-                  className="d-none d-md-block"
-                  style={{ fontSize: "0.87rem", fontWeight: "500" }}
-                >
-                  Upload Resume
-                </div>
+              <div
+                className="d-none d-md-block"
+                style={{ fontSize: "0.87rem", fontWeight: "500" }}
+              >
+                Edit Profile
               </div>
             </div>
           </div>
@@ -176,49 +162,6 @@ export default function Index() {
             style={{ fontSize: "1.87rem", fontWeight: "700" }}
             className="black"
           >
-            Status
-          </div>
-          <div className="col-12 col-sm-6 my-2">
-            <div
-              style={{ fontSize: "0.75rem", fontWeight: "500" }}
-              className=""
-            >
-              Status
-            </div>
-            <div
-              style={{
-                color: "rgba(223, 225, 230, 1)",
-                background: "#F4F5F7",
-                border: "2px solid #DFE1E6",
-              }}
-              className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer"
-            >
-              <div
-                style={{
-                  fontSize: "0.87rem",
-                  color: "#6B778C",
-                  fontWeight: "400",
-                }}
-                className=""
-              >
-                Need a Job
-              </div>
-              <FaChevronDown
-                style={{
-                  fontSize: "0.87rem",
-                  color: "#6B778C",
-                  fontWeight: "400",
-                }}
-              />
-            </div>
-          </div>
-        </article>
-
-        <article className="row mt-4">
-          <div
-            style={{ fontSize: "1.87rem", fontWeight: "700" }}
-            className="black"
-          >
             Notification
           </div>
           <div className="">
@@ -247,6 +190,12 @@ export default function Index() {
           </div>
         </article>
       </div>
+
+      <article className={`${!job && "d-none"} job_search `}>
+        <div className="container-fluid"></div>
+      </article>
     </div>
   );
 }
+
+export default Index;

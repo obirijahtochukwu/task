@@ -1,10 +1,14 @@
 import { useState } from "react";
 import {
-  FaAlignJustify,
+  FaBars,
   FaUserAlt,
   FaTimes,
   FaStackExchange,
   FaEraser,
+  FaBriefcase,
+  FaBlackTie,
+  FaBook,
+  FaUsers,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
@@ -15,9 +19,10 @@ function SideBar() {
 
   const [show, setShow] = useState(false);
   const logout = () => {
-    localStorage.removeItem("email");
-    user.setEmail("");
+    localStorage.removeItem("auth");
+    user.setData("");
     setShow(false);
+    window.location.href = "/";
   };
   const link = [
     { text: "home" },
@@ -25,15 +30,23 @@ function SideBar() {
     { text: "contact us" },
   ];
   const links = [
-    { icon: <FaUserAlt />, text: "profile", url: "user-profile" },
+    { icon: <FaUserAlt />, text: "profile", url: "/user-profile" },
     { icon: <FaStackExchange />, text: "plans", url: "" },
     { icon: <FaEraser />, text: "billing", url: "" },
+    { icon: <FaBlackTie />, text: "jobs", url: "/jobs-list" },
+    { icon: <FaBriefcase />, text: "applied jobs", url: "/applied-jobs" },
+  ];
+  const linkR = [
+    { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
+    { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
+    { icon: <FaUsers />, text: "Candidates", url: "/candidates" },
+    { icon: <FaEraser />, text: "subscription", url: "/subscription" },
   ];
 
   return (
     <div
       className={
-        user.email ? "container d-sm-none bg-white" : "container d-md-none"
+        user.data.email ? "container d-sm-none bg-white" : "container d-md-none"
       }
     >
       <div className="position-relative d-flex align-items-cen justify-content-between px-2 py-3">
@@ -54,15 +67,15 @@ function SideBar() {
             alt=""
           />
         </div>
-        <FaAlignJustify
+        <FaBars
           onClick={() => setShow(true)}
-          className="mx-2 primary_color cursor-pointer"
+          className="mx- primary_color cursor-pointer"
           style={{ fontSize: "1.3rem" }}
         />
       </div>
 
       {/* SIDEBAR */}
-      <div className={!user.email && show ? "sidebar show" : "sidebar"}>
+      <div className={!user.data.email && show ? "sidebar show" : "sidebar"}>
         <div className={show ? "sidebar_content true" : "sidebar_content"}>
           <FaTimes onClick={() => setShow(false)} className="closebar white" />
           <div className="h-100 d-flex flex-column pb-5 overflow-auto">
@@ -87,7 +100,7 @@ function SideBar() {
                 style={{ fontSize: "1rem", fontWeight: "500" }}
                 className="primary_text mx-3 my-2 text-capitalize primary_color cursor-pointer link"
               >
-                <Link className="link text-white" to="/login">
+                <Link className="link text-white" to="/signin">
                   Login for recruiters
                 </Link>
               </div>
@@ -109,7 +122,11 @@ function SideBar() {
         </div>
       </div>
 
-      <div className={user.email && show ? "sidebar show" : "sidebar"}>
+      <div
+        className={
+          user.data.type === "sales" && show ? "sidebar show" : "sidebar"
+        }
+      >
         <div className={show ? "sidebar_content true" : "sidebar_content"}>
           <div className="h-100 d-flex flex-column">
             <div
@@ -151,17 +168,104 @@ function SideBar() {
               Sales{" "}
             </div>
             <div className="my-2">
-              {links.map(({ icon, text }, index) => {
+              {links.map(({ icon, text, url }, index) => {
                 return (
-                  <div
+                  <Link
+                    to={url}
                     style={{ fontWeight: "700", fontSize: "20px" }}
                     onClick={() => setShow(false)}
                     key={index}
-                    className="align-items-center justify-content-center d-flex white py-2 text-capitalize nav_link"
+                    className={
+                      window.location.pathname === `${url}` && { text }
+                        ? "active align-items-center justify-content-center d-flex white py-2 text-capitalize nav_link link"
+                        : "align-items-center justify-content-center d-flex white py-2 text-capitalize nav_link link"
+                    }
                   >
                     <div>{icon}</div>
                     <div className="mx-2 mx-lg-4">{text}</div>
-                  </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div
+              onClick={logout}
+              style={{ border: "0.1rem solid rgba(255, 255, 255, 1)" }}
+              className="mt-auto rounded align-items-center d-flex mx-auto px-3 py-2 my-5 cursor-pointer text-white"
+            >
+              <FaUserAlt style={{ fontSize: "20px", fontWeight: "400" }} />
+              <div
+                style={{ fontSize: "14px", fontWeight: "400" }}
+                className="mx-2"
+              >
+                Log Out
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={
+          user.data.type === "recruiter" && show ? "sidebar show" : "sidebar"
+        }
+      >
+        <div className={show ? "sidebar_content true" : "sidebar_content"}>
+          <div className="h-100 d-flex flex-column">
+            <div
+              style={{
+                background: "rgba(145, 193, 232, 1)",
+                borderRadius: "100%",
+                width: "77px",
+                height: "76px",
+              }}
+              className="white align-items-center d-flex justify-content-center mt-5 mb-2 mx-auto"
+            >
+              <div
+                style={{
+                  fontWeight: "500",
+                  fontSize: "1.8rem",
+                }}
+              >
+                c
+              </div>
+            </div>
+            <div
+              style={{
+                fontWeight: "400",
+                fontSize: "1rem",
+                fontFamily: "roboto",
+              }}
+              className="white text-center"
+            >
+              Hello Obi
+            </div>
+            <div
+              style={{
+                fontWeight: "400",
+                fontSize: "0.8rem",
+                fontFamily: "roboto",
+              }}
+              className="white text-center mb-2"
+            >
+              Sales{" "}
+            </div>
+            <div className="my-2">
+              {linkR.map(({ icon, text, url }, index) => {
+                return (
+                  <Link
+                    to={url}
+                    style={{ fontWeight: "700", fontSize: "20px" }}
+                    onClick={() => setShow(false)}
+                    key={index}
+                    className={
+                      window.location.pathname === `${url}` && { text }
+                        ? "active align-items-center justify-content-center d-flex white py-2 text-capitalize nav_link link"
+                        : "align-items-center justify-content-center d-flex white py-2 text-capitalize nav_link link"
+                    }
+                  >
+                    <div>{icon}</div>
+                    <div className="mx-2 mx-lg-4">{text}</div>
+                  </Link>
                 );
               })}
             </div>

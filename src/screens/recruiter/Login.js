@@ -1,34 +1,19 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../../context";
 import { Navigate, Link } from "react-router-dom";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 
-export default function CreateAccount() {
+export default function Login() {
   const user = useGlobalContext();
   const [show, setShow] = useState(false);
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [address, setAddress] = useState("");
-  const [company, setCompany] = useState("");
   const [password, setPassword] = useState("");
-  // eslint-disable-next-line
-  const [type, setType] = useState("recruiter");
 
-  const Signup = (e) => {
+  const login = (e) => {
     e.preventDefault();
-    const data = { name, phone, email, address, company, password, type };
-    localStorage.setItem("auth", JSON.stringify(data));
-    user.setData(data);
-    setName("");
-    setPhone("");
+    localStorage.setItem("email", JSON.stringify(email));
+    user.setEmail(email);
     setEmail("");
-    setAddress("");
-    setEmail("");
-    setCompany("");
     setPassword("");
-    console.log(data);
   };
 
   if (user.data.type === "recruiter") {
@@ -37,7 +22,7 @@ export default function CreateAccount() {
 
   return (
     <div
-      className="position-fixed "
+      className="position-fixed"
       style={{
         zIndex: "2",
         top: "0",
@@ -50,7 +35,7 @@ export default function CreateAccount() {
         overflowX: "hidden",
       }}
     >
-      {console.log(user.data)}
+      {user.email}
       <div className="row">
         <div className="col-11 d-none d-md-block col-md-6 col-lg-6">
           <img
@@ -60,9 +45,9 @@ export default function CreateAccount() {
             height="100%"
           />
         </div>
-        <div className="col-11 mx-auto col-md-5 col-lg-5 col-xxl-4  position-relative ">
+        <div className="col-11 mx-auto col-md-5 col-lg-5 col-xxl-4  position-relative">
           <Link
-            to="/login"
+            to="/createaccount"
             style={{
               fontWeight: "500",
               fontSize: "18px",
@@ -73,61 +58,29 @@ export default function CreateAccount() {
             }}
             className="position-absolute my-4"
           >
-            Already have an account?{" "}
-            <span className="primary_color">Sign in</span>
+            Don’t have an account?{" "}
+            <span className="primary_color">Sign up</span>
           </Link>
           <form
-            onSubmit={Signup}
+            onSubmit={login}
             style={{ marginTop: "20%" }}
-            className="mx-auto mb-4"
+            className="mx-auto"
           >
             <div
               className="black"
               style={{ fontSize: "1.8rem", fontWeight: "700" }}
             >
-              Create your free account
+              Sign in
             </div>
             <div
               className="black"
               style={{ fontSize: "1.13rem", fontWeight: "400" }}
             >
-              Create an account and let us find the best sales talent that
-              satisfy your company’s requirements
+              Practical staffing needs for sales position across the market.
             </div>
             <div
               style={{ fontSize: "1rem", fontWeight: "500" }}
               className="mt-5"
-            >
-              Recruiter name*
-            </div>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Recruiter name"
-              style={{
-                color: "rgba(124, 146, 166, 1)",
-                fontSize: "0.87rem",
-                fontWeight: "500",
-              }}
-              required
-              autoFocus
-              className=" py-2 px-3 login_input"
-            />
-            <div
-              style={{ fontSize: "1rem", fontWeight: "500" }}
-              className="mt-4"
-            >
-              Phone number*
-            </div>
-            <PhoneInput
-              country="us"
-              value={phone}
-              onChange={() => setPhone(phone)}
-            />
-            <div
-              style={{ fontSize: "1rem", fontWeight: "500" }}
-              className="mt-4"
             >
               Email*
             </div>
@@ -142,44 +95,7 @@ export default function CreateAccount() {
                 fontWeight: "500",
               }}
               required
-              className=" py-2 px-3 login_input"
-            />
-            <div
-              style={{ fontSize: "1rem", fontWeight: "500" }}
-              className="mt-3"
-            >
-              Address*
-            </div>
-            <input
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              type="text"
-              placeholder="State"
-              style={{
-                color: "rgba(124, 146, 166, 1)",
-                fontSize: "0.87rem",
-                fontWeight: "500",
-              }}
-              required
-              className=" py-2 px-3 login_input"
-            />
-            <div
-              style={{ fontSize: "1rem", fontWeight: "500" }}
-              className="mt-3"
-            >
-              Company's name*
-            </div>
-            <input
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              type="text"
-              placeholder="Company name"
-              style={{
-                color: "rgba(124, 146, 166, 1)",
-                fontSize: "0.87rem",
-                fontWeight: "500",
-              }}
-              required
+              autoFocus
               className=" py-2 px-3 login_input"
             />
             <div
@@ -209,23 +125,22 @@ export default function CreateAccount() {
                 {show ? "Hide" : "Show"}
               </div>
             </div>
-
             <div
               style={{
-                fontSize: "1rem",
+                fontSize: "01rem",
                 fontWeight: "500",
                 color: "background: rgba(44, 82, 130, 1)",
+                fontFamily: "Roboto",
               }}
-              className="my-3"
+              className="mt-2 mb-5"
             >
-              By continuing, you agree to name Terms of Use. Read our Privacy
-              Policy.
+              Forgot password?
             </div>
             <button
               type="submit"
               className="rounded primary_bg_color text-center py-2 text-white cursor-pointer mt-5 w-100 border-0"
             >
-              Create account
+              Continue
             </button>
           </form>
         </div>

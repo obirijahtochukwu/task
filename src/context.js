@@ -4,10 +4,10 @@ import { useContext, useState } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [email, setEmail] = useState("");
+  const [data, setData] = useState({});
 
   return (
-    <AppContext.Provider value={{ email, setEmail }}>
+    <AppContext.Provider value={{ data, setData }}>
       {children}
     </AppContext.Provider>
   );

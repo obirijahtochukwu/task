@@ -10,16 +10,24 @@ import Login from "./screens/userAuth/Login";
 import Signup from "./screens/userAuth/Signup";
 import CreateAccount from "./screens/recruiter/CreateAccount";
 import UserProfile from "./screens/userProfile/Index";
+import RecruiterProfile from "./screens/recruiterProfile/Index";
+import AppliedJobs from "./screens/appliedJobs/Index";
+import Jobs from "./screens/myJobs/Index";
+import Subscription from "./screens/subscriptions/Subscription";
+import Candidates from "./screens/candidates/Candidates";
+import JobsList from "./screens/jobs/Jobs";
+import SignIn from "./screens/recruiter/Login";
 
 function App() {
   const user = useGlobalContext();
 
   useEffect(() => {
-    const email = JSON.parse(localStorage.getItem("email"));
-    if (email) {
-      user.setEmail(email);
+    const data = JSON.parse(localStorage.getItem("auth"));
+    if (data) {
+      user.setData(data);
     }
-  }, [user]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="App">
@@ -28,9 +36,37 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createAccount" element={<CreateAccount />} />
-        <Route path="/user-profile" element={<UserProfile />} />
+        <Route
+          path="/user-profile"
+          element={user.data.type === "sales" && <UserProfile />}
+        />
+        <Route
+          path="/recruiter-profile"
+          element={user.data.type === "recruiter" && <RecruiterProfile />}
+        />
+        <Route
+          path="/applied-jobs"
+          element={user.data.type === "sales" && <AppliedJobs />}
+        />
+        <Route
+          path="/jobs"
+          element={user.data.type === "recruiter" && <Jobs />}
+        />
+        <Route
+          path="/subscription"
+          element={user.data.type === "recruiter" && <Subscription />}
+        />
+        <Route
+          path="/candidates"
+          element={user.data.type === "recruiter" && <Candidates />}
+        />
+        <Route
+          path="/jobs-list"
+          element={user.data.type === "sales" && <JobsList />}
+        />
       </Routes>
     </div>
   );
