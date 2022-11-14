@@ -76,7 +76,7 @@ export default function Index(params) {
     { icon: "image 38 (4).png", text: "Health" },
   ];
 
-  if (user.email) {
+  if (user.data.email) {
     return <Navigate to="/user-profile" replace="true" />;
   }
 
