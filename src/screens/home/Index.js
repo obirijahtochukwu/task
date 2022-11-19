@@ -239,7 +239,7 @@ export default function Index(params) {
                 height: "60.32px",
                 fontSize: "1.7rem",
               }}
-              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-flex justify-content-center align-items-center white "
+              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-lg-flex justify-content-center align-items-center white d-none"
             >
               <FaArrowLeft />
             </div>
@@ -276,7 +276,7 @@ export default function Index(params) {
                 height: "60.32px",
                 fontSize: "1.7rem",
               }}
-              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-flex justify-content-center align-items-center white"
+              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-lg-flex justify-content-center align-items-center white d-none"
             >
               <FaArrowRight />
             </div>
