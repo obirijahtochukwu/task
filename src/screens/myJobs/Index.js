@@ -25,7 +25,7 @@ export default function Index() {
       img: "Rectangle 36.png",
     },
   ];
-
+  // eslint-disable-next-line
   const infos = [
     { title: "Company name*", text: "Your company name" },
     { title: "Choose industry*", text: "Select" },
