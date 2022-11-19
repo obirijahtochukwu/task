@@ -135,6 +135,12 @@ function SideBar() {
         }
       >
         <div className={show ? "sidebar_content true" : "sidebar_content"}>
+          <div
+            className="close_tab px-2 py-2 cursor-pointer"
+            onClick={() => setShow(false)}
+          >
+            X
+          </div>
           <div className="h-100 d-flex flex-column">
             <div
               style={{
@@ -223,6 +229,12 @@ function SideBar() {
         }
       >
         <div className={show ? "sidebar_content true" : "sidebar_content"}>
+          <div
+            className="close_tab px-2 py-2 cursor-pointer"
+            onClick={() => setShow(false)}
+          >
+            X
+          </div>
           <div className="h-100 d-flex flex-column">
             <div
               style={{
