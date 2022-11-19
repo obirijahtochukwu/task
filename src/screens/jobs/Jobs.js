@@ -1,129 +1,127 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaChevronDown, FaShare, FaSistrix } from "react-icons/fa";
-import PreviewJob from "./PreviewJob";
+import { Link } from "react-router-dom";
 
 export default function Jobs() {
-  const [preview, setPreview] = useState(false);
-
   const jobs = [
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
     {
-      title: "Job headline Job headline ",
+      title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
-      time: "1 day ago.",
+      time: "1 day ago",
       job: "Job Description",
     },
   ];
 
   return (
     <div className="">
-      <article className={`job_search ${preview && "d-none"} `}>
-        <div className="container-fluid">
-          <div className="row align-items-stretch">
-            <div className="col-11 col-md-9 col-lg-8 mx-auto">
+      <article className={`job_search`}>
+        <div className="container-fluid px-4">
+          <div className="">
+            <div className="modal-margin">
               <div className="">
                 <div
                   style={{ fontSize: "27px", fontWeight: "700" }}
@@ -133,16 +131,16 @@ export default function Jobs() {
                 </div>
                 <div
                   style={{ background: "rgba(185, 223, 254, 0.5)" }}
-                  className="row py-2 my-2 rounded"
+                  className="row py-2 px-0 my-2 rounded align-items-stretch"
                 >
-                  <div className="col-12 col-md-4">
+                  <div className="col-12 col-md-4 col-lg-3 mx-auto">
                     <div
                       style={{
                         color: "rgba(223, 225, 230, 1)",
                         background: "#F4F5F7",
                         border: "2px solid #DFE1E6",
                       }}
-                      className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer w-100"
+                      className="rounded d-flex justify-content-between align-items-center py-2 px-2 cursor-pointer w-100"
                     >
                       <div
                         style={{
@@ -168,7 +166,7 @@ export default function Jobs() {
                         background: "#F4F5F7",
                         border: "2px solid #DFE1E6",
                       }}
-                      className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer"
+                      className="rounded d-flex justify-content-between align-items-center mt-1 py-2 px-2 cursor-pointer"
                     >
                       <div
                         style={{
@@ -189,14 +187,14 @@ export default function Jobs() {
                       />
                     </div>
                   </div>
-                  <div className="col-12 col-md-4">
+                  <div className="col-12 col-md-3 mx-auto">
                     <div
                       style={{
                         color: "rgba(223, 225, 230, 1)",
                         background: "#F4F5F7",
                         border: "2px solid #DFE1E6",
                       }}
-                      className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer w-100"
+                      className="rounded d-flex justify-content-between align-items-center py-2 px-2 cursor-pointer w-100"
                     >
                       <div
                         style={{
@@ -222,7 +220,7 @@ export default function Jobs() {
                         background: "#F4F5F7",
                         border: "2px solid #DFE1E6",
                       }}
-                      className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer"
+                      className="rounded d-flex justify-content-between align-items-center mt-1 py-2 px-2 cursor-pointer"
                     >
                       <div
                         style={{
@@ -243,7 +241,7 @@ export default function Jobs() {
                       />
                     </div>
                   </div>
-                  <div className="col-12 col-md-4">
+                  <div className="col-12 col-md-3 mx-auto">
                     <div className="d-flex">
                       <div className="w-100">
                         <div
@@ -252,7 +250,7 @@ export default function Jobs() {
                             background: "#F4F5F7",
                             border: "2px solid #DFE1E6",
                           }}
-                          className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer"
+                          className="rounded d-flex justify-content-between align-items-center py-2 px-2 cursor-pointer"
                         >
                           <div
                             style={{
@@ -278,7 +276,7 @@ export default function Jobs() {
                             background: "#F4F5F7",
                             border: "2px solid #DFE1E6",
                           }}
-                          className="rounded d-flex justify-content-between align-items-center my-1 py-2 px-2 cursor-pointer w-100"
+                          className="rounded d-flex justify-content-between align-items-center py-2 px-2 cursor-pointer mt-1 w-100"
                         >
                           <div
                             style={{
@@ -299,21 +297,23 @@ export default function Jobs() {
                           />
                         </div>
                       </div>
-                      <div
-                        style={{
-                          fontSize: "2.7rem",
-                          backgroundColor: "rgba(241, 147, 6, 1)",
-                          fontWeight: "400",
-                        }}
-                        className="d-flex align-items-center black my-1 px-2 rounded mx-1"
-                      >
-                        <FaSistrix />
-                      </div>
+                    </div>
+                  </div>
+                  <div className="col-12 col-md-2 mx-auto">
+                    <div
+                      style={{
+                        fontSize: "2.7rem",
+                        backgroundColor: "rgba(241, 147, 6, 1)",
+                        fontWeight: "400",
+                      }}
+                      className="d-flex align-items-center justify-content-center black py-1 mt-1 mt-md-0 px-2 rounded h-100 w-100 w-md-75 mx-auto"
+                    >
+                      <FaSistrix />
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mb-5">
+              <div className="">
                 <div
                   className="black mt-4 mb-3 mx-1"
                   style={{ fontSize: "18px", fontWeight: "500" }}
@@ -347,12 +347,13 @@ export default function Jobs() {
                           className="col-12 my-2 pt-3"
                           key={index}
                         >
-                          <div className="d-flex justify-content-between ">
+                          <div className="d-flex justify-content-between align-items-strecth">
                             <div className="">
                               <span
                                 style={{
-                                  fontSize: "1.7rem",
+                                  fontSize: "28px",
                                   fontWeight: "700",
+                                  lineHeight: "33.89px",
                                 }}
                                 className="black"
                               >
@@ -397,7 +398,7 @@ export default function Jobs() {
                           </div>
                           <div className="">{desc}</div>
                           <div className="d-flex justify-content-between align-items-center my-4">
-                            <div className="d-flex">
+                            <div className="d-sm-flex d-block">
                               <div
                                 style={{
                                   background: "rgba(241, 147, 6, 1)",
@@ -413,34 +414,90 @@ export default function Jobs() {
                                   fontSize: "14px",
                                   fontWeight: "500",
                                 }}
-                                className="rounded primary_bg_color py-2 px-3 mx-2"
+                                className="rounded d-flex justify-content-center primary_bg_color py-2 px-3 mx-sm-2 mt-1 mt-sm-0"
                               >
                                 <div className="white">
                                   <FaShare /> Share
                                 </div>
                               </div>
                             </div>
-                            <div
-                              onClick={() => setPreview(true)}
-                              className="primary_color cursor-pointer"
+                            <Link
+                              to="/preview-job"
+                              className="primary_color cursor-pointer link"
                             >
                               Show more
-                            </div>
+                            </Link>
                           </div>
                         </div>
                       );
                     }
                   )}
+                  <div
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      width: "fit-content",
+                    }}
+                    className="rounded primary_bg_color py-2 px-3 mt-1 mx-0 cursor-pointer"
+                  >
+                    <div className="white">Load more results</div>
+                  </div>
+                </div>
+                <div className="pt-3">
+                  <hr />
+                  <div className="d-md-flex d-block container justify-content-between align-items-center my-4">
+                    <div style={{ fontSize: "14px" }} className="black my-3">
+                      &copy;2002, All right reserved.
+                    </div>
+                    <div className="d-md-flex d-block align-items-center">
+                      <div className="">
+                        <a
+                          href="#8"
+                          style={{ fontSize: "14px" }}
+                          className="black "
+                        >
+                          Privacy Policy
+                        </a>
+                      </div>
+                      <div className="my-1">
+                        <a
+                          href="#8"
+                          style={{ fontSize: "14px" }}
+                          className="black mx-md-4"
+                        >
+                          Terms of Service
+                        </a>
+                      </div>
+                      <div className="">
+                        <a
+                          href="#8"
+                          style={{ fontSize: "14px" }}
+                          className="black"
+                        >
+                          Cookies Settings
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-2 col-lg-3 d-none d-md-block">
-              <img src="./image 30.png" alt="" className="w-100 job_img" />
+            <div
+              style={{
+                position: "fixed",
+                zIndex: "3",
+                right: "0",
+                top: "55.98px",
+                height: "100vh",
+                width: "25%",
+              }}
+              className=" d-none d-md-block"
+            >
+              <img src="./image 30.png" alt="" className="w-100 h-100" />
             </div>
           </div>
         </div>
       </article>
-      <PreviewJob jobs={jobs} setPreview={setPreview} preview={preview} />
     </div>
   );
 }

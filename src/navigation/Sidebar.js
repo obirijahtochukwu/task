@@ -2,13 +2,13 @@ import { useState } from "react";
 import {
   FaBars,
   FaUserAlt,
-  FaTimes,
   FaStackExchange,
   FaEraser,
   FaBriefcase,
   FaBlackTie,
   FaBook,
   FaUsers,
+  FaCreditCard,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
@@ -39,12 +39,14 @@ function SideBar() {
   const linkR = [
     { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
     { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
-    { icon: <FaUsers />, text: "Candidates", url: "/candidates" },
+    { icon: <FaUsers />, text: "Create Job", url: "/create-job" },
+    { icon: <FaCreditCard />, text: "Payment", url: "/payment" },
     { icon: <FaEraser />, text: "subscription", url: "/subscription" },
   ];
 
   return (
     <div
+      style={{ borderBottom: "1px solid #dfe1e6" }}
       className={
         user.data.email ? "container d-sm-none bg-white" : "container d-md-none"
       }
@@ -77,7 +79,12 @@ function SideBar() {
       {/* SIDEBAR */}
       <div className={!user.data.email && show ? "sidebar show" : "sidebar"}>
         <div className={show ? "sidebar_content true" : "sidebar_content"}>
-          <FaTimes onClick={() => setShow(false)} className="closebar white" />
+          <div
+            className="close_tab px-2 py-2 cursor-pointer"
+            onClick={() => setShow(false)}
+          >
+            X
+          </div>
           <div className="h-100 d-flex flex-column pb-5 overflow-auto">
             <div className="my-2 mt-4">
               {link.map(({ icon, text }, index) => {
@@ -200,6 +207,12 @@ function SideBar() {
                 Log Out
               </div>
             </div>
+          </div>
+          <div
+            className="close_tab px-2 py-2 cursor-pointer"
+            onClick={() => setShow(false)}
+          >
+            X
           </div>
         </div>
       </div>

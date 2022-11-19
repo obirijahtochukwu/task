@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+  .job-margin {
+    margin-left: 25vw;
+  }
+}
+
+.job_search::-webkit-scrollbar {
+  display: none !important;
+}

@@ -4,7 +4,7 @@
   height: 100%;
   position: fixed;
   width: 100vw;
-  z-index: 1;
+  z-index: 40;
   top: 0;
   left: 0;
   visibility: hidden;
@@ -18,20 +18,26 @@
 }
 
 .sidebar_content {
-  height: 100vh;
+  position: relative;
+  height: 100%;
   width: 80vw;
   overflow-y: auto;
   overflow: hidden;
-  background-color: #4897d8;
+  background-color: #4897d7;
   box-shadow: 70px 20px 70px 120px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.sidebar_content::-webkit-scrollbar {
+  display: none;
 }
 
-.closebar {
-  cursor: pointer;
+.close_tab {
   position: absolute;
-  z-index: 100;
-  color: rgb(255, 0, 191) !important;
-  top: 1%;
-  right: 1rem;
-  font-size: 4rem;
+  top: 0;
+  right: 0;
+  font-size: 1.9rem;
+  color: red;
+  background-color: white;
+  border-radius: 0 0 0 15px;
 }

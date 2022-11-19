@@ -1,7 +1,7 @@
 .nav_section {
   z-index: 2;
   position: fixed;
-  top: 0;
+  top: 55.98px;
   left: 0;
   bottom: 0;
   background-color: #4897d8;
@@ -40,4 +40,10 @@
   .nav_section {
     width: 20% !important;
   }
+}
+
+.bd-bottom {
+  width: 100%;
+  padding: 0.5px;
+  background-color: #dfe1e6;
 }

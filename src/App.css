@@ -56,6 +56,7 @@ button {
 @media (min-width: 576px) {
   .margin {
     margin-left: 30% !important;
+    margin-top: 55.98px;
   }
 }
 @media (min-width: 993px) {
@@ -68,4 +69,15 @@ button {
   width: 100%;
   padding: 0.015rem;
   background-color: #333333;
+}
+
+@media (min-width: 768px) {
+  .modal-margin {
+    margin-right: 25vw;
+  }
+}
+@media (min-width: 768px) {
+  .modal_margin {
+    margin-left: 25vw;
+  }
 }

@@ -16,7 +16,10 @@ import Jobs from "./screens/myJobs/Index";
 import Subscription from "./screens/subscriptions/Subscription";
 import Candidates from "./screens/candidates/Candidates";
 import JobsList from "./screens/jobs/Jobs";
+import PreviewJob from "./screens/jobs/PreviewJob";
 import SignIn from "./screens/recruiter/Login";
+import CreateJob from "./screens/createteJob/CreateJob";
+import Payment from "./screens/payment/Payment";
 
 function App() {
   const user = useGlobalContext();
@@ -64,8 +67,20 @@ function App() {
           element={user.data.type === "recruiter" && <Candidates />}
         />
         <Route
+          path="/create-job"
+          element={user.data.type === "recruiter" && <CreateJob />}
+        />
+        <Route
+          path="/payment"
+          element={user.data.type === "recruiter" && <Payment />}
+        />
+        <Route
           path="/jobs-list"
           element={user.data.type === "sales" && <JobsList />}
+        />
+        <Route
+          path="/preview-job"
+          element={user.data.type === "sales" && <PreviewJob />}
         />
       </Routes>
     </div>

@@ -1,7 +1,9 @@
 .login_input {
   border-radius: 6px;
-  border: 1px solid rgba(134, 146, 166, 1);
+  border: 2px solid #dfe1e6;
   width: 100%;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
 }
 
 .show_password {
@@ -22,4 +24,25 @@
 .form-control {
   width: 100% !important;
   padding: 20px 0;
+}
+
+.account_success {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.account_success.show {
+  visibility: visible;
+  opacity: 1;
 }

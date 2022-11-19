@@ -1,68 +1,76 @@
 import { Navigate, Link } from "react-router-dom";
 import "./Index.css";
 import { useGlobalContext } from "../../context";
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 export default function Index(params) {
   const user = useGlobalContext();
 
   const cards = [
     {
-      text: "align-items-center",
+      text: "3456 Jobs Available",
+      title: "Outside sales representative",
+      img: "image 35.png",
+    },
+    {
+      text: "2122 Jobs Available",
+      title: "Inside sales representative",
+      img: "image 35.png",
+    },
+    {
+      text: "2122 Jobs Available",
+      title: "Sales manager ",
+      img: "image 35.png",
+    },
+    {
+      text: "935 Jobs Available",
+      title: "Sales manager ",
+      img: "image 35.png",
+    },
+    {
+      text: "2570 Jobs Available",
+      title: "Director of sales ",
+      img: "image 35.png",
+    },
+    {
+      text: "1485 Jobs Available",
+      title: "Regional sales manager ",
+      img: "image 35.png",
+    },
+    {
+      text: "725 Jobs Available",
+      title: "Sales operations manager",
+      img: "image 35.png",
+    },
+    {
+      text: "1758 Jobs Available",
       title: "Sales assistant ",
       img: "image 35.png",
     },
     {
-      text: "align-items-center",
-      title: "Sales assistant ",
+      text: "2570 Jobs Available",
+      title: "Director of sales",
       img: "image 35.png",
     },
     {
-      text: "align-items-center",
-      title: "Sales assistant ",
+      text: "1485 Jobs Available",
+      title: "Regional sales manager",
       img: "image 35.png",
     },
     {
-      text: "align-items-center",
-      title: "Sales assistant ",
+      text: "725 Jobs Available",
+      title: "Sales operations manager",
       img: "image 35.png",
     },
     {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
-      title: "Sales assistant ",
-      img: "image 35.png",
-    },
-    {
-      text: "align-items-center",
+      text: "1758 Jobs Available",
       title: "Sales assistant ",
       img: "image 35.png",
     },
@@ -83,15 +91,26 @@ export default function Index(params) {
   return (
     <article>
       <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-12 col-md-7 col-lg-5">
+        <div className="row align-items-center my-5 pb-4">
+          <div className="col-12 col-md-7 col-lg-7">
             <div
-              style={{ fontSize: "2rem", fontWeight: "700", color: "##16171C" }}
+              style={{
+                fontSize: "3rem",
+                fontWeight: "700",
+                color: "##16171C",
+                lineHeight: "61px",
+              }}
             >
               A wide variety of sales jobs are{" "}
               <span className="primary_color">available</span> for you
             </div>
-            <div style={{ fontSize: "18px", fontWeight: "300" }}>
+            <div
+              style={{
+                fontSize: "18px",
+                fontWeight: "300",
+                lineHeight: "25px",
+              }}
+            >
               Natural Closers will filter through and deliver the best options,
               whether you’re looking for a job or searching for someone to fill
               a sales position within your company.
@@ -99,30 +118,40 @@ export default function Index(params) {
             <div className="d-sm-flex d-block align-items-center my-3">
               <Link
                 to="/createaccount"
-                style={{ border: "0.1rem solid #4897d8", width: "fit-content" }}
+                style={{ border: "0.1rem solid #4897d8", width: "200px" }}
                 className="primary_bg_color px-2 py-2 rounded my-2 d-flex align-items-center text-white link"
               >
                 <img src="searc 1.png" width="40px" alt="" />
                 <div
-                  className="text-white"
-                  style={{ fontSize: "1.1rem", fontWeight: "500" }}
+                  className="text-white mx-2"
+                  style={{
+                    fontSize: "21px",
+                    lineHeight: "29px",
+                    fontWeight: "500",
+                  }}
                 >
-                  Create sales job
+                  Create a sales job
                 </div>
               </Link>
               <Link
                 to="/signup"
-                style={{ border: "0.1rem solid #4897d8", width: "fit-content" }}
+                style={{ border: "0.1rem solid #4897d8", width: "200px" }}
                 className="rounded d-flex cursor-pointer px-2 py-2 mx-sm-2 align-items-center primary_color link"
               >
                 <img src="image 13.png" width="40px" alt="" />
-                <div style={{ fontSize: "1rem", fontWeight: "500" }}>
-                  Find sales job
+                <div
+                  style={{
+                    fontSize: "21px",
+                    lineHeight: "29px",
+                    fontWeight: "500",
+                  }}
+                >
+                  Find a sales job
                 </div>
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-5 col-lg-6 mx-auto">
+          <div className="col-12 col-md-5 col-lg-5 mx-auto">
             <img src="./image 32.png" alt="" className="w-100" />
           </div>
         </div>
@@ -145,20 +174,26 @@ export default function Index(params) {
         <div className="row my-5">
           {cards.map(({ text, title, img }, index) => {
             return (
-              <div className="col-6 col-sm-4 col-md-3">
+              <div className="col-6 col-md-4 col-lg-3 my-2">
                 <div
                   className={
                     index === 1
-                      ? "rounded px-2 py-2 my-2 primary_bg_color"
-                      : "rounded px-2 py-2 my-2 cursor-pointer"
+                      ? "rounded px-2 py-2 primary_bg_color h-100 row flex-column mx-1"
+                      : "rounded px-2 py-2 cursor-pointer h-100 row flex-column mx-1"
                   }
                   style={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
                 >
-                  <img src={img} alt="" />
+                  <img
+                    src={img}
+                    alt=""
+                    className=""
+                    style={{ width: "52px", height: "52.03px" }}
+                  />
                   <div
                     style={{
                       fontSize: "1.3rem",
                       fontWeight: "700",
+                      lineHeight: "29.03px",
                       color: `${
                         index === 1 ? "white" : "rgba(130, 130, 130, 1)"
                       }`,
@@ -168,12 +203,15 @@ export default function Index(params) {
                   </div>
                   <div
                     style={{
-                      fontSize: "0.8rem",
+                      lineHeight: "22.03px",
+
+                      fontSize: "14.72px",
                       fontWeight: "700",
                       color: `${
                         index === 1 ? "white" : "rgba(130, 130, 130, 1)"
                       }`,
                     }}
+                    className="mt-auto"
                   >
                     {text}
                   </div>
@@ -185,41 +223,70 @@ export default function Index(params) {
       </div>
 
       <div className="container">
-        <div className="row my-5">
+        <div className="row my-5 py-lg-5 alig-items-center">
           <div
             style={{ fontSize: "2.6rem", fontWeight: "600" }}
             className="text-center"
           >
             Choose Your Industry
           </div>
-          {icons.map(({ icon, text }, index) => {
-            return (
-              <div className="col-5 col-md-3 col-lg-2 mx-auto mt-3">
-                <div className="d-flex justify-content-center">
-                  <img
-                    src={icon}
-                    alt=""
-                    className=""
-                    width="70.32px"
-                    height="70.32px"
-                  />
-                </div>
-
+          <div className="row align-items-center justify-content-between">
+            <div
+              style={{
+                background: "rgba(180, 206, 226, 1)",
+                borderRadius: "100%",
+                width: "60.32px",
+                height: "60.32px",
+                fontSize: "1.7rem",
+              }}
+              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-flex justify-content-center align-items-center white "
+            >
+              <FaArrowLeft />
+            </div>
+            {icons.map(({ icon, text }, index) => {
+              return (
                 <div
-                  className="primary_color text-center"
-                  style={{ fontSize: "1.3rem", fontWeight: "700" }}
+                  key={index}
+                  className="col-5 col-md-3 col-lg-2 mx-auto mt-3"
                 >
-                  {text}
+                  <div className="d-flex justify-content-center">
+                    <img
+                      src={icon}
+                      alt=""
+                      className=""
+                      width="70.32px"
+                      height="70.32px"
+                    />
+                  </div>
+
+                  <div
+                    className="primary_color text-center"
+                    style={{ fontSize: "1.3rem", fontWeight: "700" }}
+                  >
+                    {text}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+            <div
+              style={{
+                background: "rgba(180, 206, 226, 1)",
+                borderRadius: "100%",
+                width: "60.32px",
+                height: "60.32px",
+                fontSize: "1.7rem",
+              }}
+              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-flex justify-content-center align-items-center white"
+            >
+              <FaArrowRight />
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="container">
         <div className="row my-5 py-3 align-items-center">
-          <div className="col-12 col-lg-5">
+          <div className="col-12 col-lg-5 ">
             <div className="">
               <div className="primary_color primary_text mb-3">For closers</div>
               <div
@@ -253,10 +320,10 @@ export default function Index(params) {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-10 order-lg-first col-lg-6 my-4 mx-auto">
+          <div className="col-12 col-md-10 order-lg-first col-lg-6 my-4 mx-auto ">
             <img src="./image 20 (1).png" alt="" className="w-100" />
           </div>
-          <div className="col-12 col-lg-5 my-4 my-lg-5 mx-auto">
+          <div className="col-12 col-lg-6 my-5 pt-5">
             <div className="primary_color primary_text mb-3">
               For Recruiters
             </div>
@@ -289,18 +356,18 @@ export default function Index(params) {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-10 col-lg-6 mx-auto">
+          <div className="col-12 col-md-10 col-lg-6 mx-auto mt-lg-5 pt-3 py-lg-3">
             <img src="./image 21.png" alt="" className="w-100" />
           </div>
         </div>
       </div>
 
       <footer
-        className="container-fluid py-lg-4 px-lg-5"
+        className="container-fluid py-lg-4 px-lg-5 py-3"
         style={{ backgroundColor: "#CFEFFE" }}
       >
         <div className="d-lg-flex d-block justify-content-between align-items-start rounded py-3 px-4 py-md-5">
-          <div className="position-relative my-lg-1 mx-lg-3 my-4">
+          <div className="position-relative my-lg-1 mx-lg- my-4">
             <img
               src="./Natural.png"
               className=""
@@ -308,16 +375,25 @@ export default function Index(params) {
               height="auto"
               alt=""
             />
-            <img
-              style={{ bottom: "-40%", left: "0" }}
-              src="closer.png"
-              className=" position-absolute"
-              width="80px"
-              height="auto"
-              alt=""
-            />
+            <div
+              style={{
+                fontSize: "1rem",
+                fontWeight: "600",
+                letterSpacing: "0.35rem",
+                bottom: "1.8rem",
+              }}
+              className="black position-absolute"
+            >
+              closer
+            </div>
+            <div className="mt-4">
+              <FaFacebookF className=" cursor-pointer" />
+              <FaInstagram className="mx-1 cursor-pointer" />
+              <FaTwitter className="mx-1 cursor-pointer" />
+              <FaLinkedin className="mx-1 cursor-pointer" />
+            </div>
           </div>
-          <div className="">
+          <div className="mx-lg-3">
             <h4 className=" mb-2">Contact us</h4>
             <div
               className="black"
@@ -328,7 +404,7 @@ export default function Index(params) {
               address]
             </div>
           </div>
-          <div className="mx-lg-2">
+          <div className="mx-lg-4">
             <h4 className="mb-2 mt-3 mt-lg-0">About us</h4>
             <div
               className="black"
@@ -353,7 +429,7 @@ export default function Index(params) {
               />
               <div
                 style={{ width: "fit-content" }}
-                className="rounded primary_bg_color py-2 px-4 mx-2 my-2 my-sm-0"
+                className="rounded primary_bg_color py-2 px-4 mx-sm-2 my-2 my-sm-0"
               >
                 <div
                   style={{ fontSize: "1.1rem", fontWeight: "100" }}
@@ -365,9 +441,36 @@ export default function Index(params) {
             </div>
             <div
               style={{ fontSize: "12px", fontWeight: "400" }}
-              className="black my-4"
+              className="black my-2"
             >
               By subscribing you agree to with our Privacy Policy
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div className="d-md-flex d-block container justify-content-between align-items-center pb-3">
+          <div style={{ fontSize: "14px" }} className="black my-3">
+            &copy;2002, All right reserved.
+          </div>
+          <div className="d-md-flex d-block align-items-center">
+            <div className="">
+              <a href="#8" style={{ fontSize: "14px" }} className="black ">
+                Privacy Policy
+              </a>
+            </div>
+            <div className="my-1">
+              <a
+                href="#8"
+                style={{ fontSize: "14px" }}
+                className="black mx-md-4"
+              >
+                Terms of Service
+              </a>
+            </div>
+            <div className="">
+              <a href="#8" style={{ fontSize: "14px" }} className="black">
+                Cookies Settings
+              </a>
             </div>
           </div>
         </div>

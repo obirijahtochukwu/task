@@ -6,6 +6,7 @@ import {
   FaBlackTie,
   FaBook,
   FaUsers,
+  FaCreditCard,
 } from "react-icons/fa";
 import { useState } from "react";
 
@@ -28,7 +29,8 @@ function Navbar() {
   const linkR = [
     { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
     { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
-    { icon: <FaUsers />, text: "Candidates", url: "/candidates" },
+    { icon: <FaUsers />, text: "Create Job", url: "/create-job" },
+    { icon: <FaCreditCard />, text: "Payment", url: "/payment" },
     { icon: <FaEraser />, text: "subscription", url: "/subscription" },
   ];
 
@@ -41,9 +43,19 @@ function Navbar() {
   if (user.data.type === "sales") {
     return (
       <article className="container-fluid  bg-white ">
-        <nav className="py-3 nav_margin  d-none d-sm-block">
+        <nav
+          style={{
+            position: "fixed",
+            zIndex: "3",
+            top: "0",
+            left: "0",
+            right: "0",
+            borderBottom: "1px solid #dfe1e6",
+          }}
+          className="py-2  d-none d-sm-block bg-white"
+        >
           <div className="row">
-            <div className="col-11 mx-auto">
+            <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-block position-relative">
                   <img
@@ -75,16 +87,17 @@ function Navbar() {
                   >
                     Upload Resume
                   </div>
-                  <div
+                  <Link
+                    to="/user-profile"
                     style={{
                       borderRadius: "100%",
                       fontSize: "25px",
                       fontWeight: "500",
                     }}
-                    className="primary_bg_color px-2 py- white"
+                    className="primary_bg_color px-2 py- white link"
                   >
                     C
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -171,9 +184,19 @@ function Navbar() {
   if (user.data.type === "recruiter") {
     return (
       <article className="container-fluid  bg-white ">
-        <nav className="py-3 nav_margin  d-none d-sm-block">
+        <nav
+          style={{
+            position: "fixed",
+            zIndex: "3",
+            top: "0",
+            left: "0",
+            right: "0",
+            borderBottom: "1px solid #dfe1e6",
+          }}
+          className="py-2 bg-white px-2 d-none d-sm-block"
+        >
           <div className="row">
-            <div className="col-11 mx-auto">
+            <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-block position-relative">
                   <img
@@ -193,7 +216,8 @@ function Navbar() {
                   />
                 </div>
                 <div className="d-flex align-items-center">
-                  <div
+                  <Link
+                    to="/create-job"
                     style={{
                       fontStyle: "inter",
                       background: "#F19306",
@@ -201,20 +225,21 @@ function Navbar() {
                       fontSize: "1rem",
                       fontWeight: "500",
                     }}
-                    className="rounded mx-2 white px-3 py-2 cursor-pointer"
+                    className="rounded mx-2 white px-3 py-2 cursor-pointer link"
                   >
                     Post Job
-                  </div>
-                  <div
+                  </Link>
+                  <Link
+                    to="/recruiter-profile"
                     style={{
                       borderRadius: "100%",
                       fontSize: "25px",
                       fontWeight: "500",
                     }}
-                    className="primary_bg_color px-2 py- white"
+                    className="primary_bg_color px-2 py- white link"
                   >
                     C
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -269,7 +294,7 @@ function Navbar() {
                     style={{ fontWeight: "700", fontSize: "20px" }}
                     key={index}
                     className={
-                      show === url
+                      window.location.pathname === `${url}` && { text }
                         ? "active align-items-center d-flex white py-2 text-capitalize nav_link link"
                         : "align-items-center d-flex white py-2 text-capitalize nav_link link "
                     }
@@ -299,12 +324,9 @@ function Navbar() {
     );
   }
   return (
-    <div
-      style={{ fontFamily: "poppins" }}
-      className="container-fluid d-none d-md-block"
-    >
-      <div className="row px-3 py-3 align-items-center justify-content-between">
-        <div className="col-md-1 col-lg-2 ">
+    <div className="container d-none d-md-block">
+      <div className="row py-3 align-items-center justify-content-between">
+        <div className="col-md-1 ">
           <div className=" justify-content-between">
             <div className="d-block position-relative">
               <img
@@ -325,7 +347,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-        <div className="col-md-9 col-lg-10 col-xl-8">
+        <div className="col-md-10">
           <div className="d-flex align-items-center justify-content-between">
             <div className="d-flex align-items-center">
               <div
@@ -334,13 +356,22 @@ function Navbar() {
               >
                 Home
               </div>
-              <div className="primary_text mx-4  mx-lg-5">How it works</div>
-              <div className="primary_text">Contact us</div>
+              <div
+                className="primary_text mx-4  mx-lg-5"
+                style={{ fontSize: "1rem" }}
+              >
+                {" "}
+                How it works
+              </div>
+              <div className="primary_text" style={{ fontSize: "1rem" }}>
+                Contact us
+              </div>
             </div>
             <div className="d-flex align-items-center">
               <Link
                 to="/signin"
                 className="primary_text  mx-3 d-md-none link d-lg-flex cursor-pointer"
+                style={{ fontSize: "1rem" }}
               >
                 Login for recruiters
               </Link>
