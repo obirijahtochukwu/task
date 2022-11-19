@@ -1,7 +1,9 @@
 import React from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { FaArrowLeft, FaChevronDown } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Payment() {
+  const history = useNavigate();
   return (
     <article className={`job_search bg-white`}>
       <div
@@ -21,6 +23,13 @@ export default function Payment() {
         <div className="container">
           <div className="row py-3">
             <div className="col-lg-11 col-12 mx-auto">
+              <div
+                onClick={() => history(-1)}
+                style={{ width: "fit-content" }}
+                className="rounded primary_bg_color px-3 py-2 white mb-2 cursor-pointer"
+              >
+                <FaArrowLeft /> Back
+              </div>
               <div
                 style={{ fontSize: "24px", fontWeight: "700" }}
                 className=" black"

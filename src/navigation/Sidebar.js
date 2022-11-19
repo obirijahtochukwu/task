@@ -38,10 +38,10 @@ function SideBar() {
   ];
   const linkR = [
     { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
+    { icon: <FaEraser />, text: "Billing", url: "/subscription" },
     { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
     { icon: <FaUsers />, text: "Create Job", url: "/create-job" },
     { icon: <FaCreditCard />, text: "Payment", url: "/payment" },
-    { icon: <FaEraser />, text: "subscription", url: "/subscription" },
   ];
 
   return (

@@ -1,8 +1,11 @@
 import React from "react";
-import { FaChevronDown, FaUpload, FaEye } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaChevronDown, FaUpload, FaEye, FaArrowLeft } from "react-icons/fa";
 import "./Index.css";
 
 export default function CreateJob() {
+  const history = useNavigate();
+
   const infos = [
     { title: "Company name*", text: "Your company name" },
     { title: "Choose industry*", text: "Select" },
@@ -35,6 +38,13 @@ export default function CreateJob() {
             <div className="row justify-content-between align-items-stretch">
               <div className="col-12 col-sm-5 col-md-5">
                 <div className="row h-100 flex-column px-2">
+                  <div
+                    onClick={() => history(-1)}
+                    style={{ width: "fit-content" }}
+                    className="rounded primary_bg_color px-3 py-2 white mb-2 cursor-pointer"
+                  >
+                    <FaArrowLeft /> Back
+                  </div>
                   <div
                     style={{ fontSize: "30px", fontWeight: "700" }}
                     className="primary_color mx-0 px-0"

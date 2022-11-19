@@ -28,10 +28,10 @@ function Navbar() {
 
   const linkR = [
     { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
+    { icon: <FaEraser />, text: " Billing", url: "/subscription" },
     { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
     { icon: <FaUsers />, text: "Create Job", url: "/create-job" },
     { icon: <FaCreditCard />, text: "Payment", url: "/payment" },
-    { icon: <FaEraser />, text: "subscription", url: "/subscription" },
   ];
 
   const logout = () => {
@@ -54,7 +54,7 @@ function Navbar() {
           }}
           className="py-2  d-none d-sm-block bg-white"
         >
-          <div className="row">
+          <div className="row px-2">
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-block position-relative">
@@ -127,7 +127,6 @@ function Navbar() {
               style={{
                 fontWeight: "400",
                 fontSize: "1rem",
-                fontFamily: "roboto",
               }}
               className="white text-center"
             >
@@ -137,7 +136,6 @@ function Navbar() {
               style={{
                 fontWeight: "400",
                 fontSize: "0.8rem",
-                fontFamily: "roboto",
               }}
               className="white text-center mb-2"
             >
@@ -269,7 +267,6 @@ function Navbar() {
               style={{
                 fontWeight: "400",
                 fontSize: "1rem",
-                fontFamily: "roboto",
               }}
               className="white text-center"
             >
@@ -279,7 +276,6 @@ function Navbar() {
               style={{
                 fontWeight: "400",
                 fontSize: "0.8rem",
-                fontFamily: "roboto",
               }}
               className="white text-center mb-2"
             >

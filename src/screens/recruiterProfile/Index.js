@@ -8,8 +8,11 @@ function Index() {
   const [job, setJob] = useState(false);
 
   return (
-    <div className="margin ">
-      <div className={`${job && "d-none"} container-fluid bg-white py-4`}>
+    <div className="margin bg-white pb-md-5">
+      <div
+        className={`${job && "d-none"} container-fluid bg-white py-4 mb-md-5`}
+        style={{ bottom: "0" }}
+      >
         <div className="d-flex justify-content-between align-items-center">
           <div
             style={{ fontSize: "1.87rem", fontWeight: "700" }}

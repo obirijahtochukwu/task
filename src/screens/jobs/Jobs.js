@@ -1,8 +1,10 @@
 import React from "react";
-import { FaChevronDown, FaShare, FaSistrix } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaArrowLeft, FaChevronDown, FaShare, FaSistrix } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Jobs() {
+  const history = useNavigate();
+
   const jobs = [
     {
       title: "Job headline Job headline Job headline Job headline ",
@@ -123,6 +125,13 @@ export default function Jobs() {
           <div className="">
             <div className="modal-margin">
               <div className="">
+                <div
+                  onClick={() => history(-1)}
+                  style={{ width: "fit-content" }}
+                  className="rounded primary_bg_color px-3 py-2 white mb-2 cursor-pointer mt-2"
+                >
+                  <FaArrowLeft /> Back
+                </div>
                 <div
                   style={{ fontSize: "27px", fontWeight: "700" }}
                   className="primary_color my-3"
@@ -344,7 +353,7 @@ export default function Jobs() {
                             borderLeft: "4px solid #4897D8",
                             borderRadius: "8px",
                           }}
-                          className="col-12 my-2 pt-3"
+                          className="col-12 my-2 pt-3 bg-white"
                           key={index}
                         >
                           <div className="d-flex justify-content-between align-items-strecth">
@@ -423,7 +432,7 @@ export default function Jobs() {
                             </div>
                             <Link
                               to="/preview-job"
-                              className="primary_color cursor-pointer link"
+                              className="primary_color cursor-pointer link  mx-3"
                             >
                               Show more
                             </Link>
