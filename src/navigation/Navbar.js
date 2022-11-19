@@ -20,8 +20,8 @@ function Navbar() {
 
   const links = [
     { icon: <FaUserAlt />, text: "profile", url: "/user-profile" },
-    { icon: <FaStackExchange />, text: "plans", url: "/j" },
-    { icon: <FaEraser />, text: "billing", url: "/iui" },
+    { icon: <FaStackExchange />, text: "plans", url: "/user-profile" },
+    { icon: <FaEraser />, text: "billing", url: "/user-profile" },
     { icon: <FaBlackTie />, text: "jobs", url: "/jobs-list" },
     { icon: <FaBriefcase />, text: "applied jobs", url: "/applied-jobs" },
   ];
