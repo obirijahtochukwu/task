@@ -271,7 +271,7 @@ export default function Signup() {
             Thanks for registering with job portal. Your account has been
             created.
           </div>
-          <Link to="/user-profile" className="link">
+          <Link to="/jobs" className="link">
             <div
               style={{
                 fontWeight: "500",
@@ -286,7 +286,7 @@ export default function Signup() {
 
           <div style={{ fontSize: "2rem" }} className="">
             <Link
-              to="/user-profile"
+              to="/job-list"
               style={{
                 top: "0.6rem",
                 right: "1rem",

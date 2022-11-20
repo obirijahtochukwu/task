@@ -1,16 +1,20 @@
-import React from "react";
-import { FaArrowLeft, FaChevronDown, FaShare, FaSistrix } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { FaChevronDown, FaShare, FaSistrix } from "react-icons/fa";
 
 export default function Jobs() {
-  const history = useNavigate();
+  const [readMore, setReadMore] = useState(false);
+  const [id, setId] = useState();
+  const show = (index) => {
+    setReadMore(!readMore);
+    setId(index);
+  };
 
   const jobs = [
     {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -20,7 +24,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -30,7 +34,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -40,7 +44,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -50,7 +54,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -60,7 +64,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -70,7 +74,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -80,7 +84,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -90,7 +94,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -100,7 +104,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -110,7 +114,7 @@ export default function Jobs() {
       title: "Job headline Job headline Job headline Job headline ",
       salary: "20k-50k",
       duration: "Full Time",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
       contract: "1 - 3day",
       location: "Location",
       time: "1 day ago",
@@ -126,21 +130,16 @@ export default function Jobs() {
             <div className="modal-margin">
               <div className="container">
                 <div
-                  onClick={() => history(-1)}
-                  style={{ width: "fit-content" }}
-                  className="rounded primary_bg_color px-3 py-2 white mb-2 cursor-pointer mt-2"
-                >
-                  <FaArrowLeft /> Back
-                </div>
-                <div
                   style={{ fontSize: "27px", fontWeight: "700" }}
                   className="primary_color my-3"
                 >
                   Find the job you want
                 </div>
                 <div
-                  style={{ background: "rgba(185, 223, 254, 0.5)" }}
-                  className="d-flex py-2 px-3 px-0 my-2 rounded align-items-stretch"
+                  style={{
+                    background: "rgba(185, 223, 254, 0.5)",
+                  }}
+                  className="d-md-flex py-2 px-md-2 my-2 rounded align-items-stretch w-100"
                 >
                   <div className="col-12 colx">
                     <div
@@ -197,7 +196,7 @@ export default function Jobs() {
                     </div>
                   </div>
                   <div className="col-12 colx">
-                    <div className="mx-2">
+                    <div className="mx-md-2 my-1 my-md-0">
                       <div
                         style={{
                           color: "rgba(223, 225, 230, 1)",
@@ -435,7 +434,12 @@ export default function Jobs() {
                               </div>
                               <div className="mx-2">{time}</div>
                             </div>
-                            <div className="">{desc}</div>
+                            <div className="">
+                              {id === index && readMore
+                                ? desc
+                                : desc.substring(0, 300)}
+                            </div>
+                            {id}
                             <div className="d-flex justify-content-between align-items-center my-4">
                               <div className="d-sm-flex d-block">
                                 <div
@@ -460,12 +464,14 @@ export default function Jobs() {
                                   </div>
                                 </div>
                               </div>
-                              <Link
-                                to="/preview-job"
+                              <div
+                                onClick={() => show(index)}
                                 className="primary_color cursor-pointer link  mx-3"
                               >
-                                Show more
-                              </Link>
+                                {index === id && readMore
+                                  ? "Show less"
+                                  : "Show more"}
+                              </div>
                             </div>
                           </div>
                         );

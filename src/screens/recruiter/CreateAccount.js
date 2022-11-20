@@ -294,7 +294,7 @@ export default function CreateAccount() {
             Thanks for registering with job portal. Your account has been
             created.
           </div>
-          <Link to="/recruiter-profile" className="link">
+          <Link to="/create-job" className="link">
             <div
               style={{
                 fontWeight: "500",
@@ -309,7 +309,7 @@ export default function CreateAccount() {
 
           <div style={{ fontSize: "2rem" }} className="">
             <Link
-              to="/recruiter-profile"
+              to="/create-job"
               style={{
                 top: "0.6rem",
                 right: "1rem",

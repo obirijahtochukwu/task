@@ -138,18 +138,18 @@ export default function Index(params) {
                   fontWeight: "300",
                   lineHeight: "25px",
                 }}
-                className="col-11"
+                className="col-11 col-lg-10"
               >
                 Natural Closers will filter through and deliver the best
                 options, whether you’re looking for a job or searching for
                 someone to fill a sales position within your company.
               </div>
             </div>
-            <div className="d-sm-flex d-block align-items-center my-3">
+            <div className="d-sm-flex d-block align-items-center my-5">
               <Link
                 to="/createaccount"
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}
-                className="primary_bg_color px-2 py-2 rounded my-2 d-flex align-items-center text-white link"
+                className="primary_bg_color px-3 py-3 rounded my-2 d-flex align-items-center text-white link"
               >
                 <img src="searc 1.png" width="40px" alt="" />
                 <div
@@ -166,7 +166,7 @@ export default function Index(params) {
               <Link
                 to="/signup"
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}
-                className="rounded d-flex cursor-pointer px-2 py-2 mx-sm-2 align-items-center primary_color link"
+                className="rounded d-flex cursor-pointer px-3 py-3 mx-sm-2 align-items-center primary_color link"
               >
                 <img src="image 13.png" width="50px" alt="" />
                 <div

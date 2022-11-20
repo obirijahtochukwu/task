@@ -5,7 +5,6 @@ import {
   FaStackExchange,
   FaEraser,
   FaBriefcase,
-  FaBlackTie,
   FaBook,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -31,7 +30,6 @@ function SideBar() {
     { icon: <FaUserAlt />, text: "profile", url: "/user-profile" },
     { icon: <FaStackExchange />, text: "plans", url: "" },
     { icon: <FaEraser />, text: "billing", url: "" },
-    { icon: <FaBlackTie />, text: "jobs", url: "/jobs-list" },
     { icon: <FaBriefcase />, text: "applied jobs", url: "/applied-jobs" },
   ];
   const linkR = [

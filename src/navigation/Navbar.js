@@ -3,7 +3,6 @@ import {
   FaUserAlt,
   FaEraser,
   FaBriefcase,
-  FaBlackTie,
   FaBook,
 } from "react-icons/fa";
 import { useState } from "react";
@@ -20,7 +19,6 @@ function Navbar() {
     { icon: <FaUserAlt />, text: "profile", url: "/user-profile" },
     { icon: <FaStackExchange />, text: "plans", url: "/user-profile" },
     { icon: <FaEraser />, text: "billing", url: "/user-profile" },
-    { icon: <FaBlackTie />, text: "jobs", url: "/jobs-list" },
     { icon: <FaBriefcase />, text: "applied jobs", url: "/applied-jobs" },
   ];
 
@@ -223,7 +221,7 @@ function Navbar() {
                     Post Job
                   </div>
                   <Link
-                    to="/user-profile"
+                    to="/recruiter-profile"
                     style={{
                       borderRadius: "100%",
                       fontSize: "25px",
@@ -323,7 +321,7 @@ function Navbar() {
               <img
                 src="./Natural.png"
                 className=""
-                width="100px"
+                width="140px"
                 height="auto"
                 alt=""
               />
@@ -331,7 +329,7 @@ function Navbar() {
                 style={{ bottom: "-40%", left: "0" }}
                 src="closer.png"
                 className=" position-absolute"
-                width="80px"
+                width="100px"
                 height="auto"
                 alt=""
               />
