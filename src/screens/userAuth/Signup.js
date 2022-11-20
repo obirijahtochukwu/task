@@ -47,14 +47,14 @@ export default function Signup() {
         overflowX: "hidden",
       }}
     >
-      <div className="">
+      <div className="container">
         <div
           style={{
             position: "fixed",
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "40%",
+            width: "20%",
             height: "100vh",
           }}
           className="d-none d-md-block"
@@ -148,13 +148,16 @@ export default function Signup() {
               </div>
               <PhoneInput
                 containerStyle={{
-                  border: "1px solid rgba(134, 146, 166, 1)",
+                  border: "1px solid #dfe1e6",
                   borderRadius: "6px",
                 }}
                 containerClass="py-0"
                 inputStyle={{ paddingTop: "1.4rem", paddingBottom: "1.4rem" }}
+                inputClass="px-3"
                 country="us"
+                placeholder="+1"
                 value={phone}
+                disableDropdown={true}
                 onChange={() => setPhone(phone)}
               />
               <div
@@ -210,14 +213,14 @@ export default function Signup() {
                   fontWeight: "500",
                   color: "background: rgba(44, 82, 130, 1)",
                 }}
-                className="my-3"
+                className="my-3 col-sm-9 col-lg-6"
               >
                 By continuing, you agree to name Terms of Use. Read our Privacy
                 Policy.
               </div>
               <button
                 type="submit"
-                className="rounded primary_bg_color text-center py-2 text-white cursor-pointer w-100 border-0"
+                className="rounded primary_bg_color text-center py-3 text-white cursor-pointer w-100 border-0"
               >
                 Create account
               </button>
@@ -266,7 +269,7 @@ export default function Signup() {
             className=""
           >
             Thanks for registering with job portal. Your account has been
-            <span className="bg-warning rounded p-1 black">created</span>.
+            created.
           </div>
           <Link to="/user-profile" className="link">
             <div

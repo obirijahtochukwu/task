@@ -26,17 +26,29 @@ export default function Index(params) {
     },
     {
       text: "2122 Jobs Available",
-      title: "Sales manager ",
+      title: (
+        <span>
+          Sales <div className="mx-3"></div> manager{" "}
+        </span>
+      ),
       img: "image 35.png",
     },
     {
       text: "935 Jobs Available",
-      title: "Sales manager ",
+      title: (
+        <span>
+          Sales <div className="mx-3"></div> manager{" "}
+        </span>
+      ),
       img: "image 35.png",
     },
     {
       text: "2570 Jobs Available",
-      title: "Director of sales ",
+      title: (
+        <span>
+          Director of <div className="mx-5"></div> sales{" "}
+        </span>
+      ),
       img: "image 35.png",
     },
     {
@@ -51,12 +63,21 @@ export default function Index(params) {
     },
     {
       text: "1758 Jobs Available",
-      title: "Sales assistant ",
+      title: (
+        <span>
+          {" "}
+          Sales <div className="mx-3"></div> assistant{" "}
+        </span>
+      ),
       img: "image 35.png",
     },
     {
       text: "2570 Jobs Available",
-      title: "Director of sales",
+      title: (
+        <span>
+          Director of <div className="mx-5"></div> sales{" "}
+        </span>
+      ),
       img: "image 35.png",
     },
     {
@@ -71,7 +92,12 @@ export default function Index(params) {
     },
     {
       text: "1758 Jobs Available",
-      title: "Sales assistant ",
+      title: (
+        <span>
+          {" "}
+          Sales <div className="mx-3"></div> assistant{" "}
+        </span>
+      ),
       img: "image 35.png",
     },
   ];
@@ -92,7 +118,7 @@ export default function Index(params) {
     <article>
       <div className="container">
         <div className="row align-items-center my-5 pb-4">
-          <div className="col-12 col-md-7 col-lg-7">
+          <div className="col-12 col-md-8">
             <div
               style={{
                 fontSize: "3rem",
@@ -100,20 +126,24 @@ export default function Index(params) {
                 color: "##16171C",
                 lineHeight: "61px",
               }}
+              className="px-0 mx-0"
             >
               A wide variety of sales jobs are{" "}
               <span className="primary_color">available</span> for you
             </div>
-            <div
-              style={{
-                fontSize: "18px",
-                fontWeight: "300",
-                lineHeight: "25px",
-              }}
-            >
-              Natural Closers will filter through and deliver the best options,
-              whether you’re looking for a job or searching for someone to fill
-              a sales position within your company.
+            <div className="row">
+              <div
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "300",
+                  lineHeight: "25px",
+                }}
+                className="col-11"
+              >
+                Natural Closers will filter through and deliver the best
+                options, whether you’re looking for a job or searching for
+                someone to fill a sales position within your company.
+              </div>
             </div>
             <div className="d-sm-flex d-block align-items-center my-3">
               <Link
@@ -138,7 +168,7 @@ export default function Index(params) {
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}
                 className="rounded d-flex cursor-pointer px-2 py-2 mx-sm-2 align-items-center primary_color link"
               >
-                <img src="image 13.png" width="40px" alt="" />
+                <img src="image 13.png" width="50px" alt="" />
                 <div
                   style={{
                     fontSize: "21px",
@@ -146,12 +176,12 @@ export default function Index(params) {
                     fontWeight: "500",
                   }}
                 >
-                  Find a sales job
+                  Find a <div className="mx-2"></div> sales job
                 </div>
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-5 col-lg-5 mx-auto">
+          <div className="col-12 col-md-4 mx-auto">
             <img src="./image 32.png" alt="" className="w-100" />
           </div>
         </div>
@@ -178,16 +208,20 @@ export default function Index(params) {
                 <div
                   className={
                     index === 1
-                      ? "rounded px-2 py-2 primary_bg_color h-100 row flex-column mx-1"
-                      : "rounded px-2 py-2 cursor-pointer h-100 row flex-column mx-1"
+                      ? "rounded px-2 py-4 primary_bg_color h-100 row flex-column mx-1"
+                      : "rounded px-2 py-4 cursor-pointer h-100 row flex-column mx-1"
                   }
-                  style={{ backgroundColor: "rgba(255, 255, 255, 1)" }}
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 1)",
+                    gap: "8.41px",
+                    boxShadow: "0px 0.20586px 10.0293px #FFEFE0",
+                  }}
                 >
                   <img
                     src={img}
                     alt=""
                     className=""
-                    style={{ width: "52px", height: "52.03px" }}
+                    style={{ width: "72px", height: "52.03px" }}
                   />
                   <div
                     style={{
@@ -226,7 +260,7 @@ export default function Index(params) {
         <div className="row my-5 py-lg-5 alig-items-center">
           <div
             style={{ fontSize: "2.6rem", fontWeight: "600" }}
-            className="text-center"
+            className="text-center mb-md-4"
           >
             Choose Your Industry
           </div>
@@ -285,8 +319,8 @@ export default function Index(params) {
       </div>
 
       <div className="container">
-        <div className="row my-5 py-3 align-items-center">
-          <div className="col-12 col-lg-5 ">
+        <div className="row my-5 py-3 align-items-center justify-content-between">
+          <div className="col-12 col-lg-6 mx-auto mx-lg-0 ">
             <div className="">
               <div className="primary_color primary_text mb-3">For closers</div>
               <div
@@ -320,10 +354,10 @@ export default function Index(params) {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-10 order-lg-first col-lg-6 my-4 mx-auto ">
+          <div className="col-12 col-md-10 order-lg-first col-lg-5 my-4 mx-auto  mx-lg-0">
             <img src="./image 20 (1).png" alt="" className="w-100" />
           </div>
-          <div className="col-12 col-lg-6 my-5 pt-5">
+          <div className="col-12 col-lg-6 mx-auto my-5 pt-5 mx-lg-0">
             <div className="primary_color primary_text mb-3">
               For Recruiters
             </div>
@@ -356,7 +390,7 @@ export default function Index(params) {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-10 col-lg-6 mx-auto mt-lg-5 pt-3 py-lg-3">
+          <div className="col-12 col-md-10 col-lg-5 mx-auto mt-lg-5 pt-3 py-lg-3 mx-lg-0">
             <img src="./image 21.png" alt="" className="w-100" />
           </div>
         </div>
@@ -367,31 +401,11 @@ export default function Index(params) {
         style={{ backgroundColor: "#CFEFFE" }}
       >
         <div className="d-lg-flex d-block justify-content-between align-items-start rounded py-3 px-4 py-md-5">
-          <div className="position-relative my-lg-1 mx-lg- my-4">
-            <img
-              src="./Natural.png"
-              className=""
-              width="100px"
-              height="auto"
-              alt=""
-            />
-            <div
-              style={{
-                fontSize: "1rem",
-                fontWeight: "600",
-                letterSpacing: "0.35rem",
-                bottom: "1.8rem",
-              }}
-              className="black position-absolute"
-            >
-              closer
-            </div>
-            <div className="mt-4">
-              <FaFacebookF className=" cursor-pointer" />
-              <FaInstagram className="mx-1 cursor-pointer" />
-              <FaTwitter className="mx-1 cursor-pointer" />
-              <FaLinkedin className="mx-1 cursor-pointer" />
-            </div>
+          <div className="d-lg-flex mt-2 d-none">
+            <FaFacebookF className=" cursor-pointer" />
+            <FaInstagram className="mx-2 cursor-pointer" />
+            <FaTwitter className="mx-2 cursor-pointer" />
+            <FaLinkedin className="mx-1 cursor-pointer" />
           </div>
           <div className="mx-lg-3">
             <h4 className=" mb-2">Contact us</h4>
@@ -439,11 +453,11 @@ export default function Index(params) {
                 </div>
               </div>
             </div>
-            <div
-              style={{ fontSize: "12px", fontWeight: "400" }}
-              className="black my-2"
-            >
-              By subscribing you agree to with our Privacy Policy
+            <div className="d-flex mt-3">
+              <FaFacebookF className=" cursor-pointer primary_color" />
+              <FaInstagram className="mx-3 cursor-pointer primary_color" />
+              <FaTwitter className="mx-3 cursor-pointer primary_color" />
+              <FaLinkedin className="mx-1 cursor-pointer primary_color" />
             </div>
           </div>
         </div>

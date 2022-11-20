@@ -73,11 +73,21 @@ button {
 
 @media (min-width: 768px) {
   .modal-margin {
-    margin-right: 25vw;
+    margin-right: 15vw;
   }
 }
 @media (min-width: 768px) {
   .modal_margin {
     margin-left: 25vw;
+  }
+}
+@media (min-width: 768px) {
+  .colx {
+    flex: 0 0 auto;
+    width: 30%;
+  }
+  .colx-1 {
+    flex: 0 0 auto;
+    width: 10%;
   }
 }

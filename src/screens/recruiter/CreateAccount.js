@@ -56,7 +56,7 @@ export default function CreateAccount() {
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "40%",
+            width: "20%",
             height: "100vh",
           }}
           className=" d-none d-md-block"
@@ -68,7 +68,7 @@ export default function CreateAccount() {
             style={{ height: "100vh" }}
           />
         </div>
-        <div className="container-fluid">
+        <div className="container">
           <div className="position-relative pt-5 pb-2 auth-margin ">
             <Link
               to="/login"
@@ -96,12 +96,14 @@ export default function CreateAccount() {
               >
                 Create your free account
               </div>
-              <div
-                className="black"
-                style={{ fontSize: "1.13rem", fontWeight: "400" }}
-              >
-                Create an account and let us find the best sales talent that
-                satisfy your company’s requirements
+              <div className="row">
+                <div
+                  className="black col-12 col-sm-9"
+                  style={{ fontSize: "1.13rem", fontWeight: "400" }}
+                >
+                  Create an account and let us find the best sales talent that
+                  satisfy your company’s requirements
+                </div>
               </div>
               <div
                 style={{ fontSize: "1rem", fontWeight: "500" }}
@@ -130,8 +132,17 @@ export default function CreateAccount() {
                 Phone number*
               </div>
               <PhoneInput
+                containerStyle={{
+                  border: "1px solid #dfe1e6",
+                  borderRadius: "6px",
+                }}
+                containerClass="py-0"
+                inputStyle={{ paddingTop: "1.4rem", paddingBottom: "1.4rem" }}
+                inputClass="px-3"
                 country="us"
+                placeholder="+1"
                 value={phone}
+                disableDropdown={true}
                 onChange={() => setPhone(phone)}
               />
               <div
@@ -218,21 +229,22 @@ export default function CreateAccount() {
                   {show ? "Hide" : "Show"}
                 </div>
               </div>
-
-              <div
-                style={{
-                  fontSize: "1rem",
-                  fontWeight: "500",
-                  color: "background: rgba(44, 82, 130, 1)",
-                }}
-                className="my-3"
-              >
-                By continuing, you agree to name Terms of Use. Read our Privacy
-                Policy.
+              <div className="row">
+                <div
+                  style={{
+                    fontSize: "1rem",
+                    fontWeight: "500",
+                    color: "background: rgba(44, 82, 130, 1)",
+                  }}
+                  className="my-3 col-11 col-sm-7"
+                >
+                  By continuing, you agree to name Terms of Use. Read our
+                  Privacy Policy.
+                </div>
               </div>
               <button
                 type="submit"
-                className="rounded primary_bg_color text-center py-2 text-white cursor-pointer w-100 border-0"
+                className="rounded primary_bg_color text-center py-3 text-white cursor-pointer w-100 border-0"
               >
                 Create account
               </button>
@@ -280,7 +292,7 @@ export default function CreateAccount() {
             className=""
           >
             Thanks for registering with job portal. Your account has been
-            <span className="bg-warning rounded p-1 black">created</span>.
+            created.
           </div>
           <Link to="/recruiter-profile" className="link">
             <div

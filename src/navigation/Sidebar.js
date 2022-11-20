@@ -7,8 +7,6 @@ import {
   FaBriefcase,
   FaBlackTie,
   FaBook,
-  FaUsers,
-  FaCreditCard,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
@@ -40,8 +38,6 @@ function SideBar() {
     { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
     { icon: <FaEraser />, text: "Billing", url: "/subscription" },
     { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
-    { icon: <FaUsers />, text: "Create Job", url: "/create-job" },
-    { icon: <FaCreditCard />, text: "Payment", url: "/payment" },
   ];
 
   return (

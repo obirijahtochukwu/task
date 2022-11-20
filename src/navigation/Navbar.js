@@ -5,8 +5,6 @@ import {
   FaBriefcase,
   FaBlackTie,
   FaBook,
-  FaUsers,
-  FaCreditCard,
 } from "react-icons/fa";
 import { useState } from "react";
 
@@ -30,8 +28,6 @@ function Navbar() {
     { icon: <FaUserAlt />, text: "profile", url: "/recruiter-profile" },
     { icon: <FaEraser />, text: " Billing", url: "/subscription" },
     { icon: <FaBook />, text: "My Jobs", url: "/jobs" },
-    { icon: <FaUsers />, text: "Create Job", url: "/create-job" },
-    { icon: <FaCreditCard />, text: "Payment", url: "/payment" },
   ];
 
   const logout = () => {
@@ -66,7 +62,7 @@ function Navbar() {
                     alt=""
                   />
                   <img
-                    style={{ bottom: "-40%", left: "0" }}
+                    style={{ bottom: "-35%", left: "0" }}
                     src="closer.png"
                     className=" position-absolute"
                     width="80px"
@@ -193,10 +189,10 @@ function Navbar() {
           }}
           className="py-2 bg-white px-2 d-none d-sm-block"
         >
-          <div className="row">
+          <div className="row px-2">
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
-                <div className="d-block position-relative">
+                <div className="d-block position-relative ">
                   <img
                     src="./Natural.png"
                     className=""
@@ -205,7 +201,7 @@ function Navbar() {
                     alt=""
                   />
                   <img
-                    style={{ bottom: "-40%", left: "0" }}
+                    style={{ bottom: "-35%", left: "0" }}
                     src="closer.png"
                     className=" position-absolute"
                     width="80px"
@@ -214,8 +210,7 @@ function Navbar() {
                   />
                 </div>
                 <div className="d-flex align-items-center">
-                  <Link
-                    to="/create-job"
+                  <div
                     style={{
                       fontStyle: "inter",
                       background: "#F19306",
@@ -223,12 +218,12 @@ function Navbar() {
                       fontSize: "1rem",
                       fontWeight: "500",
                     }}
-                    className="rounded mx-2 white px-3 py-2 cursor-pointer link"
+                    className="rounded mx-2 white px-3 py-2 cursor-pointer"
                   >
                     Post Job
-                  </Link>
+                  </div>
                   <Link
-                    to="/recruiter-profile"
+                    to="/user-profile"
                     style={{
                       borderRadius: "100%",
                       fontSize: "25px",

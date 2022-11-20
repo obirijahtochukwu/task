@@ -14,7 +14,7 @@ export default function Payment() {
           left: "0",
           top: "55.98px",
           height: "100vh",
-          width: "25%",
+          width: "15%",
         }}
       >
         <img src="./image 30.png" alt="" className="w-100 h-100" />

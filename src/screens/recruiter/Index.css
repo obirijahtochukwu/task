@@ -1,5 +1,19 @@
 @media (min-width: 768px) {
   .auth-margin {
-    margin-left: 40vw;
+    margin-left: 20vw;
   }
+}
+
+.flag {
+  display: none;
+}
+
+.selected-flag {
+  outline: none;
+  position: relative;
+  display: none;
+  width: 38px;
+  height: 100%;
+  padding: 0 0 0 8px;
+  border-radius: 3px 0 0 3px;
 }

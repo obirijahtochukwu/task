@@ -35,7 +35,6 @@ export default function Login() {
         overflowX: "hidden",
       }}
     >
-      {user.email}
       <div className="">
         <div
           style={{
@@ -43,7 +42,7 @@ export default function Login() {
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "40%",
+            width: "20%",
             height: "100vh",
           }}
           className=" d-none d-md-block"
@@ -145,7 +144,7 @@ export default function Login() {
               </div>
               <button
                 type="submit"
-                className="rounded primary_bg_color text-center py-2 text-white cursor-pointer w-100 border-0"
+                className="rounded primary_bg_color text-center py-3 text-white cursor-pointer w-100 border-0"
               >
                 Continue
               </button>

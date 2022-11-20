@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAngleDoubleRight, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Subscription() {
   return (
@@ -84,8 +85,9 @@ export default function Subscription() {
                 <FaAngleDoubleRight />
                 <div className="white mx-2">Customer service 24/7</div>
               </div>
-              <div
-                className="rounded px-2 py-2 white my-4"
+              <Link
+                to="/payment"
+                className="rounded px-2 py-2 white my-4 link"
                 style={{
                   background: "rgba(147, 193, 231, 1)",
                   width: "fit-content",
@@ -98,7 +100,7 @@ export default function Subscription() {
                 >
                   <FaChevronRight />{" "}
                 </span>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="col-11 col-md-6 col-xl-4 mx-auto mx-md-0 my-3">
@@ -164,8 +166,9 @@ export default function Subscription() {
                 <FaAngleDoubleRight />
                 <div className="white mx-2">Customer service 24/7</div>
               </div>
-              <div
-                className="rounded px-2 py-2 white my-4 primary_bg_color"
+              <Link
+                to="/payment"
+                className="rounded px-2 py-2 white my-4 primary_bg_color link"
                 style={{
                   width: "fit-content",
                 }}
@@ -177,7 +180,7 @@ export default function Subscription() {
                 >
                   <FaChevronRight />{" "}
                 </span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
