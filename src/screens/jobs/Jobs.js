@@ -368,6 +368,11 @@ export default function Jobs() {
                           className="col-12 my-2 pt-3 bg-white"
                           key={index}
                         >
+                          <img
+                            src="-- Replace Me --.png"
+                            className="d-sm-none d-block w-100"
+                            alt=""
+                          />
                           <div className="d-flex justify-content-between align-items-strecth">
                             <div className="">
                               <span
