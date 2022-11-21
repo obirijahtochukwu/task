@@ -82,6 +82,11 @@ button {
   }
 }
 @media (min-width: 768px) {
+  .modalMargin {
+    margin-right: 25vw;
+  }
+}
+@media (min-width: 768px) {
   .colx {
     flex: 0 0 auto;
     width: 30%;
@@ -99,5 +104,8 @@ button {
   .colx-1 {
     flex: 0 0 auto;
     width: 5%;
+  }
+  .pr-lg-2 {
+    padding-right: 2rem;
   }
 }

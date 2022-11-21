@@ -37,14 +37,14 @@ export default function Login() {
       }}
     >
       {user.email}
-      <div className="container">
+      <div className="container-fluid bg-white h-100">
         <div
           style={{
             position: "fixed",
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "20%",
+            width: "45%",
             height: "100vh",
           }}
           className="d-none d-md-block"
@@ -56,7 +56,7 @@ export default function Login() {
             style={{ height: "100vh" }}
           />
         </div>
-        <div className="container-fluid">
+        <div className="container">
           <div className="position-relative pt-5 pb-2 auth-margin ">
             <Link
               to="/signup"
@@ -76,7 +76,7 @@ export default function Login() {
             <form
               onSubmit={login}
               style={{ marginTop: "20%" }}
-              className="mx-auto mt-4"
+              className="mx-xl-5 mt-5 px-xl-3 pt-md-4"
             >
               <div
                 className="black"
@@ -92,7 +92,7 @@ export default function Login() {
               </div>
               <div
                 style={{ fontSize: "1rem", fontWeight: "500" }}
-                className="mt-3"
+                className="mt-3 mt-lg-4"
               >
                 Email*
               </div>
@@ -139,10 +139,9 @@ export default function Login() {
               </div>
               <div
                 style={{
-                  fontSize: "01rem",
-                  fontWeight: "500",
+                  fontSize: "14px",
+                  fontWeight: "400",
                   color: "background: rgba(44, 82, 130, 1)",
-                  fontFamily: "Roboto",
                 }}
                 className="mb-3 mt-2"
               >

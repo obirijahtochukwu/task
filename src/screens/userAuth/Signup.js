@@ -47,14 +47,14 @@ export default function Signup() {
         overflowX: "hidden",
       }}
     >
-      <div className="container">
+      <div className="container-fluid  bg-white">
         <div
           style={{
             position: "fixed",
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "20%",
+            width: "45%",
             height: "100vh",
           }}
           className="d-none d-md-block"
@@ -66,7 +66,7 @@ export default function Signup() {
             style={{ height: "100vh" }}
           />
         </div>
-        <div className="container-fluid">
+        <div className="container">
           <div className="pt-5 pb-2 auth-margin position-relative ">
             <Link
               to="/login"
@@ -86,7 +86,7 @@ export default function Signup() {
             <form
               onSubmit={login}
               style={{ marginTop: "20%" }}
-              className="mx-auto mb-4 mt-4"
+              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5 px-xl-3"
             >
               <div
                 className="black"
@@ -103,7 +103,7 @@ export default function Signup() {
               </div>
               <div
                 style={{ fontSize: "1rem", fontWeight: "500" }}
-                className="mt-3"
+                className="mt-4"
               >
                 Your full name*
               </div>
@@ -213,7 +213,7 @@ export default function Signup() {
                   fontWeight: "500",
                   color: "background: rgba(44, 82, 130, 1)",
                 }}
-                className="my-3 col-sm-9 col-lg-6"
+                className="my-3 col-sm-9"
               >
                 By continuing, you agree to name Terms of Use. Read our Privacy
                 Policy.
@@ -222,7 +222,7 @@ export default function Signup() {
                 type="submit"
                 className="rounded primary_bg_color text-center py-3 text-white cursor-pointer w-100 border-0"
               >
-                Create account
+                Create Account
               </button>
             </form>
           </div>
@@ -271,7 +271,7 @@ export default function Signup() {
             Thanks for registering with job portal. Your account has been
             created.
           </div>
-          <Link to="/jobs" className="link">
+          <Link to="/" className="link">
             <div
               style={{
                 fontWeight: "500",
@@ -286,7 +286,7 @@ export default function Signup() {
 
           <div style={{ fontSize: "2rem" }} className="">
             <Link
-              to="/job-list"
+              to="/"
               style={{
                 top: "0.6rem",
                 right: "1rem",

@@ -49,29 +49,29 @@ export default function CreateAccount() {
         overflowX: "hidden",
       }}
     >
-      <div className="">
+      <div className="container-fluid bg-white">
         <div
           style={{
             position: "fixed",
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "20%",
+            width: "45%",
             height: "100vh",
           }}
           className=" d-none d-md-block"
         >
           <img
-            src="image 27.png"
+            src="image 19.png"
             alt=""
             className="w-100 "
-            style={{ height: "100vh" }}
+            style={{ height: "100%" }}
           />
         </div>
         <div className="container">
           <div className="position-relative pt-5 pb-2 auth-margin ">
             <Link
-              to="/login"
+              to="/signin"
               style={{
                 fontWeight: "500",
                 fontSize: "18px",
@@ -88,7 +88,7 @@ export default function CreateAccount() {
             <form
               onSubmit={Signup}
               style={{ marginTop: "" }}
-              className="mx-auto mb-4 mt-4"
+              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5"
             >
               <div
                 className="black"
@@ -96,14 +96,12 @@ export default function CreateAccount() {
               >
                 Create your free account
               </div>
-              <div className="row">
-                <div
-                  className="black col-12 col-sm-9"
-                  style={{ fontSize: "1.13rem", fontWeight: "400" }}
-                >
-                  Create an account and let us find the best sales talent that
-                  satisfy your company’s requirements
-                </div>
+              <div
+                className="black "
+                style={{ fontSize: "1.13rem", fontWeight: "400" }}
+              >
+                Create an account and let us find the best sales talent that
+                satisfy your company’s requirements
               </div>
               <div
                 style={{ fontSize: "1rem", fontWeight: "500" }}
@@ -236,7 +234,7 @@ export default function CreateAccount() {
                     fontWeight: "500",
                     color: "background: rgba(44, 82, 130, 1)",
                   }}
-                  className="my-3 col-11 col-sm-7"
+                  className="my-3 col-12"
                 >
                   By continuing, you agree to name Terms of Use. Read our
                   Privacy Policy.
@@ -294,7 +292,7 @@ export default function CreateAccount() {
             Thanks for registering with job portal. Your account has been
             created.
           </div>
-          <Link to="/create-job" className="link">
+          <Link to="/" className="link">
             <div
               style={{
                 fontWeight: "500",
@@ -309,7 +307,7 @@ export default function CreateAccount() {
 
           <div style={{ fontSize: "2rem" }} className="">
             <Link
-              to="/create-job"
+              to="/"
               style={{
                 top: "0.6rem",
                 right: "1rem",

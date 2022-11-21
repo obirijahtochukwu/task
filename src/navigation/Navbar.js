@@ -7,13 +7,15 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 import "./Navbar.css";
 
 function Navbar() {
   const user = useGlobalContext();
   const [show, setShow] = useState(window.location.pathname);
+
+  const navigate = useNavigate();
 
   const links = [
     { icon: <FaUserAlt />, text: "profile", url: "/user-profile" },
@@ -48,7 +50,7 @@ function Navbar() {
           }}
           className="py-2  d-none d-sm-block bg-white"
         >
-          <div className="row px-2">
+          <div className="row px-3">
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-block position-relative">
@@ -87,10 +89,12 @@ function Navbar() {
                       borderRadius: "100%",
                       fontSize: "25px",
                       fontWeight: "500",
+                      width: "40px",
+                      height: "40px",
                     }}
-                    className="primary_bg_color px-2 py- white link"
+                    className="primary_bg_color px-2 py- white link d-flex align-items-center justify-content-center"
                   >
-                    C
+                    <div className="">C</div>
                   </Link>
                 </div>
               </div>
@@ -209,6 +213,7 @@ function Navbar() {
                 </div>
                 <div className="d-flex align-items-center">
                   <div
+                    onClick={() => navigate("/")}
                     style={{
                       fontStyle: "inter",
                       background: "#F19306",
@@ -226,10 +231,12 @@ function Navbar() {
                       borderRadius: "100%",
                       fontSize: "25px",
                       fontWeight: "500",
+                      width: "40px",
+                      height: "40px",
                     }}
-                    className="primary_bg_color px-2 py- white link"
+                    className="primary_bg_color px-2 py- white link d-flex align-items-center justify-content-center"
                   >
-                    C
+                    <div className="">R</div>
                   </Link>
                 </div>
               </div>

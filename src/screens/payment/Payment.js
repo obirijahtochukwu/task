@@ -1,9 +1,7 @@
 import React from "react";
-import { FaArrowLeft, FaChevronDown } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Payment() {
-  const history = useNavigate();
   return (
     <article className={`job_search bg-white`}>
       <div
@@ -21,29 +19,22 @@ export default function Payment() {
       </div>
       <div className="job-margin">
         <div className="container">
-          <div className="row py-3">
+          <div className="row py-4">
             <div className="col-lg-11 col-12 mx-auto">
               <div
-                onClick={() => history(-1)}
-                style={{ width: "fit-content" }}
-                className="rounded primary_bg_color px-3 py-2 white mb-2 cursor-pointer"
-              >
-                <FaArrowLeft /> Back
-              </div>
-              <div
                 style={{ fontSize: "24px", fontWeight: "700" }}
-                className=" black"
+                className="mb-2 black"
               >
                 Post Job
               </div>
-              <div className="row">
+              <div className="row pb-md-2">
                 <div
                   style={{
                     fontSize: "16px",
                     fontWeight: "400",
                     lineHeight: "19.36px",
                   }}
-                  className="col-md-12 black"
+                  className="col-md-10 black"
                 >
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -55,7 +46,7 @@ export default function Payment() {
                     fontWeight: "400",
                     lineHeight: "19.36px",
                   }}
-                  className="mt-2"
+                  className="mt-3"
                 >
                   Lorem Ipsum is simply dummy text of the printing
                 </div>
@@ -81,8 +72,8 @@ export default function Payment() {
                 </div>
               </div>
               <hr />
-              <div className="row">
-                <div className="col-12 col-md-7">
+              <div className="row justify-content-between">
+                <div className="col-12 col-md-6 col-lg-7">
                   <div
                     style={{ fontSize: "24px", fontWeight: "700" }}
                     className=" black my-2"
@@ -118,8 +109,9 @@ export default function Payment() {
                       background: "#F4F5F7",
                       border: "2px solid #DFE1E6",
                       padding: "14px 0",
+                      borderRadius: "3px",
                     }}
-                    className="rounded d-flex justify-content-between align-items-center my-1 px-3 cursor-pointer"
+                    className=" d-flex justify-content-between align-items-center my-1 px-3 cursor-pointer"
                   >
                     <div
                       style={{
@@ -181,8 +173,9 @@ export default function Payment() {
                       background: "#F4F5F7",
                       border: "2px solid #DFE1E6",
                       padding: "14px 0",
+                      borderRadius: "3px",
                     }}
-                    className="rounded d-flex justify-content-between align-items-center my-1 px-3 cursor-pointer"
+                    className="d-flex justify-content-between align-items-center my-1 px-3 cursor-pointer"
                   >
                     <div>
                       <input
@@ -190,7 +183,6 @@ export default function Payment() {
                         name="flexRadioDefault"
                         id="flexRadioDefault2"
                         type="radio"
-                        checked
                       ></input>{" "}
                       <span
                         style={{
@@ -281,8 +273,9 @@ export default function Payment() {
                       fontSize: "20px",
                       fontWeight: "500",
                       lineHeight: "24.2px",
+                      borderRadius: "3px",
                     }}
-                    className="primary_bg_color py-3 w-100 text-center white rounded mt-3 mb-2 cursor-pointer"
+                    className="primary_bg_color py-3 w-100 text-center white mt-3 mb-3 cursor-pointer"
                   >
                     Place order
                   </div>
@@ -292,7 +285,7 @@ export default function Payment() {
                       fontWeight: "500",
                       lineHeight: "16px",
                     }}
-                    className="mt1 black text-center"
+                    className="black text-center"
                   >
                     By clicking the button, you agree to the{" "}
                     <span className="primary_color cursor-pointer">
@@ -300,10 +293,10 @@ export default function Payment() {
                     </span>
                   </div>
                 </div>
-                <div className="col-12 col-md-5 order-first order-md-last">
+                <div className="col-12 col-md-5 col-lg-4 order-first order-md-last">
                   <div
                     style={{ border: "1px solid #dfe1e6" }}
-                    className=" px-2 py-2 my-3"
+                    className=" px-3 py-2 my-3"
                   >
                     <div
                       style={{
@@ -315,7 +308,7 @@ export default function Payment() {
                     >
                       Summary
                     </div>
-                    <div className="d-flex justify-content-between align-items-center my-3">
+                    <div className="d-flex justify-content-between align-items-center my-4">
                       <div
                         style={{
                           fontSize: "16px",
@@ -343,7 +336,7 @@ export default function Payment() {
                         fontWeight: "400",
                         lineHeight: "20.48px",
                       }}
-                      className="black"
+                      className="black mx-2"
                     >
                       Per new post
                     </li>
@@ -353,7 +346,7 @@ export default function Payment() {
                         fontWeight: "400",
                         lineHeight: "20.48px",
                       }}
-                      className="black my-2"
+                      className="black my-3 mx-2"
                     >
                       7$ Per each repost
                     </li>
@@ -363,7 +356,7 @@ export default function Payment() {
                         fontWeight: "400",
                         lineHeight: "20.48px",
                       }}
-                      className="black"
+                      className="black mx-2"
                     >
                       Customer service 24/7
                     </li>

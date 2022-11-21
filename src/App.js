@@ -37,7 +37,15 @@ function App() {
       <Navbar />
       <Sidebar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route
+          exact
+          path="/"
+          element={
+            (!user.data.email && <Home />) ||
+            (user.data.type === "sales" && <JobsList />) ||
+            (user.data.type === "recruiter" && <CreateJob />)
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<Signup />} />
@@ -67,20 +75,12 @@ function App() {
           element={user.data.type === "recruiter" && <Candidates />}
         />
         <Route
-          path="/create-job"
-          element={user.data.type === "recruiter" && <CreateJob />}
-        />
-        <Route
           path="/payment"
           element={user.data.type === "recruiter" && <Payment />}
         />
         <Route
-          path="/jobs-list"
-          element={user.data.type === "sales" && <JobsList />}
-        />
-        <Route
           path="/preview-job"
-          element={user.data.type === "sales" && <PreviewJob />}
+          element={user.data.type === "recruiter" && <PreviewJob />}
         />
       </Routes>
     </div>

@@ -121,7 +121,7 @@ export default function Index(params) {
           <div className="col-12 col-md-8">
             <div
               style={{
-                fontSize: "3rem",
+                fontSize: "51px",
                 fontWeight: "700",
                 color: "##16171C",
                 lineHeight: "61px",
@@ -187,7 +187,7 @@ export default function Index(params) {
         </div>
       </div>
       <div className="container">
-        <div className="my-5 row">
+        <div className="my-5 row pb-5">
           <div className="col-md-8">
             <div style={{ fontSize: "2.6rem", fontWeight: "600" }}>
               Choose Your Next Role here
@@ -201,7 +201,7 @@ export default function Index(params) {
       </div>
 
       <div className="container">
-        <div className="row my-5">
+        <div className="row my-5 px-1">
           {cards.map(({ text, title, img }, index) => {
             return (
               <div className="col-6 col-md-4 col-lg-3 my-2">
@@ -225,6 +225,7 @@ export default function Index(params) {
                   />
                   <div
                     style={{
+                      wordBreak: "break-all",
                       fontSize: "1.3rem",
                       fontWeight: "700",
                       lineHeight: "29.03px",
@@ -260,7 +261,7 @@ export default function Index(params) {
         <div className="row my-5 py-lg-5 alig-items-center">
           <div
             style={{ fontSize: "2.6rem", fontWeight: "600" }}
-            className="text-center mb-md-4"
+            className="text-center mb-md-5"
           >
             Choose Your Industry
           </div>
@@ -319,7 +320,7 @@ export default function Index(params) {
       </div>
 
       <div className="container">
-        <div className="row my-5 py-3 align-items-center justify-content-between">
+        <div className="row my-5 pt-3 pb-5 align-items-center justify-content-between">
           <div className="col-12 col-lg-6 mx-auto mx-lg-0 ">
             <div className="">
               <div className="primary_color primary_text mb-3">For closers</div>
@@ -357,7 +358,7 @@ export default function Index(params) {
           <div className="col-12 col-md-10 order-lg-first col-lg-5 my-4 mx-auto  mx-lg-0">
             <img src="./image 20 (1).png" alt="" className="w-100" />
           </div>
-          <div className="col-12 col-lg-6 mx-auto my-5 pt-5 mx-lg-0">
+          <div className="col-12 col-lg-6 mx-auto mt-lg-5 pt-5 mx-lg-0">
             <div className="primary_color primary_text mb-3">
               For Recruiters
             </div>
@@ -390,7 +391,7 @@ export default function Index(params) {
               </div>
             </div>
           </div>
-          <div className="col-12 col-md-10 col-lg-5 mx-auto mt-lg-5 pt-3 py-lg-3 mx-lg-0">
+          <div className="col-12 col-md-10 col-lg-5 mx-auto mt-lg-5 pt-5 py-lg-3 mx-lg-0">
             <img src="./image 21.png" alt="" className="w-100" />
           </div>
         </div>

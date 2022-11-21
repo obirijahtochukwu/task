@@ -35,26 +35,26 @@ export default function Login() {
         overflowX: "hidden",
       }}
     >
-      <div className="">
+      <div className=" bg-white container-fluid h-100">
         <div
           style={{
             position: "fixed",
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "20%",
+            width: "45%",
             height: "100vh",
           }}
           className=" d-none d-md-block"
         >
           <img
-            src="image 27.png"
+            src="image 19 (1).png"
             alt=""
             className="w-100"
-            style={{ height: "100vh" }}
+            style={{ height: "100%" }}
           />
         </div>
-        <div className="container-fluid">
+        <div className="container">
           <div className="position-relative pt-5 pb-2 auth-margin ">
             <Link
               to="/createaccount"
@@ -71,7 +71,7 @@ export default function Login() {
               Don’t have an account?{" "}
               <span className="primary_color">Sign up</span>
             </Link>
-            <form onSubmit={login} className="mx-auto mt-4">
+            <form onSubmit={login} className="mx-xl-5 mt-5 px-xl-3 pt-md-4">
               <div
                 className="black"
                 style={{ fontSize: "1.8rem", fontWeight: "700" }}
@@ -86,7 +86,7 @@ export default function Login() {
               </div>
               <div
                 style={{ fontSize: "1rem", fontWeight: "500" }}
-                className="mt-3"
+                className="mt-3 mt-md-4"
               >
                 Email*
               </div>
@@ -133,10 +133,9 @@ export default function Login() {
               </div>
               <div
                 style={{
-                  fontSize: "01rem",
-                  fontWeight: "500",
+                  fontSize: "14px",
+                  fontWeight: "400",
                   color: "background: rgba(44, 82, 130, 1)",
-                  fontFamily: "Roboto",
                 }}
                 className="mt-2 mb-3"
               >
