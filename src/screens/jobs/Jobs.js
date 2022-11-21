@@ -430,7 +430,7 @@ export default function Jobs() {
                             </div>
                             <img
                               src="-- Replace Me --.png"
-                              className=""
+                              className="d-none d-sm-block"
                               alt=""
                             />
                           </div>
