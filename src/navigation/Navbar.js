@@ -320,7 +320,7 @@ function Navbar() {
     );
   }
   return (
-    <div className="container d-none d-md-block">
+    <div className="container-fluid d-none d-md-block">
       <div className="row py-3 align-items-center justify-content-between">
         <div className="col-md-1 ">
           <div className=" justify-content-between">

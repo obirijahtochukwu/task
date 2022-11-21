@@ -118,15 +118,14 @@ export default function Index(params) {
     <article>
       <div className="container">
         <div className="row align-items-center my-5 pb-4">
-          <div className="col-12 col-md-8">
+          <div className="col-12 col-md-8 col-lg-7">
             <div
               style={{
-                fontSize: "51px",
-                fontWeight: "700",
+                fontSize: "43px",
+                fontWeight: "900",
                 color: "##16171C",
-                lineHeight: "61px",
               }}
-              className="px-0 mx-0"
+              className="px-0 mx-0 mb-3"
             >
               A wide variety of sales jobs are{" "}
               <span className="primary_color">available</span> for you
@@ -145,7 +144,7 @@ export default function Index(params) {
                 someone to fill a sales position within your company.
               </div>
             </div>
-            <div className="d-sm-flex d-block align-items-center my-5">
+            <div className="d-sm-flex d-block align-items-center my-5 pt-md-3">
               <Link
                 to="/createaccount"
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}
@@ -181,7 +180,7 @@ export default function Index(params) {
               </Link>
             </div>
           </div>
-          <div className="col-12 col-md-4 mx-auto">
+          <div className="col-12 col-md-4 col-lg-5 mx-auto">
             <img src="./image 32.png" alt="" className="w-100" />
           </div>
         </div>
@@ -402,13 +401,7 @@ export default function Index(params) {
         style={{ backgroundColor: "#CFEFFE" }}
       >
         <div className="d-lg-flex d-block justify-content-between align-items-start rounded py-3 px-4 py-md-5">
-          <div className="d-lg-flex mt-2 d-none">
-            <FaFacebookF className=" cursor-pointer" />
-            <FaInstagram className="mx-2 cursor-pointer" />
-            <FaTwitter className="mx-2 cursor-pointer" />
-            <FaLinkedin className="mx-1 cursor-pointer" />
-          </div>
-          <div className="mx-lg-3">
+          <div className="">
             <h4 className=" mb-2">Contact us</h4>
             <div
               className="black"
@@ -455,10 +448,22 @@ export default function Index(params) {
               </div>
             </div>
             <div className="d-flex mt-3">
-              <FaFacebookF className=" cursor-pointer primary_color" />
-              <FaInstagram className="mx-3 cursor-pointer primary_color" />
-              <FaTwitter className="mx-3 cursor-pointer primary_color" />
-              <FaLinkedin className="mx-1 cursor-pointer primary_color" />
+              <FaFacebookF
+                style={{ fontSize: "1.5rem" }}
+                className=" cursor-pointer primary_color"
+              />
+              <FaInstagram
+                style={{ fontSize: "1.5rem" }}
+                className="mx-4 cursor-pointer primary_color"
+              />
+              <FaTwitter
+                style={{ fontSize: "1.5rem" }}
+                className=" cursor-pointer primary_color"
+              />
+              <FaLinkedin
+                style={{ fontSize: "1.5rem" }}
+                className="mx-4 cursor-pointer primary_color"
+              />
             </div>
           </div>
         </div>
