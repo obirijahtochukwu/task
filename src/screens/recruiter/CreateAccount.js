@@ -64,11 +64,10 @@ export default function CreateAccount() {
           <img
             src="figma 4.png"
             alt=""
-            className="w-100 "
-            style={{ height: "100%" }}
+            style={{ height: "100%", width: "85%" }}
           />
         </div>
-        <div className="container">
+        <div className="container h-100">
           <div className="position-relative pt-5 pb-2 auth-margin ">
             <Link
               to="/signin"
@@ -88,7 +87,7 @@ export default function CreateAccount() {
             <form
               onSubmit={Signup}
               style={{ marginTop: "" }}
-              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5"
+              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-3"
             >
               <div
                 className="black"
