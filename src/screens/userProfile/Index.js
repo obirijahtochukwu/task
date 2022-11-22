@@ -11,7 +11,7 @@ export default function Index() {
       <div className="container-lg">
         <div className="margin h-100">
           <div className="row">
-            <div className="col-lg-10 mx-auto">
+            <div className="col-lg-11 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <div
                   style={{ fontSize: "1.87rem", fontWeight: "700" }}

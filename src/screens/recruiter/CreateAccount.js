@@ -62,7 +62,7 @@ export default function CreateAccount() {
           className=" d-none d-md-block"
         >
           <img
-            src="image 19.png"
+            src="figma 4.png"
             alt=""
             className="w-100 "
             style={{ height: "100%" }}
@@ -94,7 +94,7 @@ export default function CreateAccount() {
                 className="black"
                 style={{ fontSize: "1.8rem", fontWeight: "700" }}
               >
-                Create your free account
+                Create your account
               </div>
               <div
                 className="black "

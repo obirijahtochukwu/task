@@ -19,8 +19,8 @@ function Navbar() {
 
   const links = [
     { icon: <FaUserAlt />, text: "profile", url: "/user-profile" },
-    { icon: <FaStackExchange />, text: "plans", url: "/user-profile" },
-    { icon: <FaEraser />, text: "billing", url: "/user-profile" },
+    { icon: <FaStackExchange />, text: "plans", url: "/plans" },
+    { icon: <FaEraser />, text: "billing", url: "/billing" },
     { icon: <FaBriefcase />, text: "applied jobs", url: "/applied-jobs" },
   ];
 
@@ -53,23 +53,12 @@ function Navbar() {
           <div className="row px-3">
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
-                <div className="d-block position-relative">
-                  <img
-                    src="./Natural.png"
-                    className=""
-                    width="100px"
-                    height="auto"
-                    alt=""
-                  />
-                  <img
-                    style={{ bottom: "-35%", left: "0" }}
-                    src="closer.png"
-                    className=" position-absolute"
-                    width="80px"
-                    height="auto"
-                    alt=""
-                  />
-                </div>
+                <img
+                  src="./logo intoosales.png"
+                  style={{ width: "174px", height: "45px" }}
+                  className=""
+                  alt=""
+                />
                 <div className="d-flex align-items-center">
                   <div
                     style={{
@@ -83,18 +72,15 @@ function Navbar() {
                   >
                     Upload Resume
                   </div>
-                  <Link
-                    to="/user-profile"
-                    style={{
-                      borderRadius: "100%",
-                      fontSize: "25px",
-                      fontWeight: "500",
-                      width: "40px",
-                      height: "40px",
-                    }}
-                    className="primary_bg_color px-2 py- white link d-flex align-items-center justify-content-center"
-                  >
-                    <div className="">C</div>
+                  <Link to="/user-profile" className="">
+                    <img
+                      style={{
+                        width: "42px",
+                        height: "42px",
+                      }}
+                      src="./user.png"
+                      alt=""
+                    />
                   </Link>
                 </div>
               </div>
@@ -103,24 +89,15 @@ function Navbar() {
         </nav>
         <section className="nav_section d-none d-sm-block">
           <div className="h-100 d-flex flex-column">
-            <div
+            <img
               style={{
-                background: "rgba(145, 193, 232, 1)",
-                borderRadius: "100%",
-                width: "77px",
-                height: "76px",
+                width: "82px",
+                height: "82px",
               }}
-              className="white align-items-center d-flex justify-content-center mt-5 mb-2 mx-auto"
-            >
-              <div
-                style={{
-                  fontWeight: "500",
-                  fontSize: "1.8rem",
-                }}
-              >
-                c
-              </div>
-            </div>
+              src="./user.png"
+              alt=""
+              className="mx-auto mt-4 mb-3"
+            />
             <div
               style={{
                 fontWeight: "400",
@@ -135,7 +112,7 @@ function Navbar() {
                 fontWeight: "400",
                 fontSize: "0.8rem",
               }}
-              className="white text-center mb-2"
+              className="white text-center mb-4"
             >
               Sales{" "}
             </div>
@@ -145,7 +122,15 @@ function Navbar() {
                   <Link
                     to={url}
                     onClick={() => setShow(url)}
-                    style={{ fontWeight: "700", fontSize: "20px" }}
+                    style={{
+                      fontWeight: "700",
+                      fontSize: "20px",
+                      pointerEvents: `${
+                        (url === "/plans" && "none") ||
+                        (url === "/billing" && "none") ||
+                        ""
+                      }`,
+                    }}
                     key={index}
                     className={
                       show === url
@@ -194,23 +179,12 @@ function Navbar() {
           <div className="row px-2">
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
-                <div className="d-block position-relative ">
-                  <img
-                    src="./Natural.png"
-                    className=""
-                    width="100px"
-                    height="auto"
-                    alt=""
-                  />
-                  <img
-                    style={{ bottom: "-35%", left: "0" }}
-                    src="closer.png"
-                    className=" position-absolute"
-                    width="80px"
-                    height="auto"
-                    alt=""
-                  />
-                </div>
+                <img
+                  src="./logo intoosales.png"
+                  style={{ width: "174px", height: "45px" }}
+                  className=""
+                  alt=""
+                />
                 <div className="d-flex align-items-center">
                   <div
                     onClick={() => navigate("/")}
@@ -223,20 +197,23 @@ function Navbar() {
                     }}
                     className="rounded mx-2 white px-3 py-2 cursor-pointer"
                   >
-                    Post Job
+                    Post a Job*
                   </div>
                   <Link
                     to="/recruiter-profile"
                     style={{
                       borderRadius: "100%",
-                      fontSize: "25px",
-                      fontWeight: "500",
-                      width: "40px",
-                      height: "40px",
                     }}
-                    className="primary_bg_color px-2 py- white link d-flex align-items-center justify-content-center"
                   >
-                    <div className="">R</div>
+                    <img
+                      style={{
+                        width: "42px",
+                        height: "42px",
+                      }}
+                      src="./user.png"
+                      alt=""
+                      className=""
+                    />
                   </Link>
                 </div>
               </div>
@@ -245,24 +222,15 @@ function Navbar() {
         </nav>
         <section className="nav_section d-none d-sm-block">
           <div className="h-100 d-flex flex-column">
-            <div
+            <img
               style={{
-                background: "rgba(145, 193, 232, 1)",
-                borderRadius: "100%",
-                width: "77px",
-                height: "76px",
+                width: "82px",
+                height: "82px",
               }}
-              className="white align-items-center d-flex justify-content-center mt-5 mb-2 mx-auto"
-            >
-              <div
-                style={{
-                  fontWeight: "500",
-                  fontSize: "1.8rem",
-                }}
-              >
-                c
-              </div>
-            </div>
+              src="./user.png"
+              alt=""
+              className="mx-auto mt-5 mb-3"
+            />
             <div
               style={{
                 fontWeight: "400",
@@ -270,16 +238,16 @@ function Navbar() {
               }}
               className="white text-center"
             >
-              Hello Obi
+              Hello Jazz
             </div>
             <div
               style={{
                 fontWeight: "400",
                 fontSize: "0.8rem",
               }}
-              className="white text-center mb-2"
+              className="white text-center mb-3"
             >
-              Sales{" "}
+              Recruiter{" "}
             </div>
             <div className="my-2">
               {linkR.map(({ icon, text, url }, index) => {
@@ -321,45 +289,35 @@ function Navbar() {
   }
   return (
     <div className="container-fluid d-none d-md-block">
-      <div className="row py-3 align-items-center justify-content-between">
-        <div className="col-md-1 ">
-          <div className=" justify-content-between">
-            <div className="d-block position-relative">
-              <img
-                src="./Natural.png"
-                className=""
-                width="140px"
-                height="auto"
-                alt=""
-              />
-              <img
-                style={{ bottom: "-40%", left: "0" }}
-                src="closer.png"
-                className=" position-absolute"
-                width="100px"
-                height="auto"
-                alt=""
-              />
-            </div>
-          </div>
+      <div className="row align-items-center justify-content-between px-2">
+        <div className="col-md-2 col-xl-2">
+          <img
+            src="./logo intoosales.png"
+            style={{ width: "174px", height: "45px" }}
+            className=""
+            alt=""
+          />
         </div>
-        <div className="col-md-10">
+        <div className="col-md-9 mt-3">
           <div className="d-flex align-items-center justify-content-between">
             <div className="d-flex align-items-center">
               <div
                 className="primary_text primary_color  cursor-pointer"
-                style={{ fontWeight: "700" }}
+                style={{ fontSize: "1.2rem", fontWeight: "700" }}
               >
                 Home
               </div>
               <div
                 className="primary_text mx-4  mx-lg-5"
-                style={{ fontSize: "1rem" }}
+                style={{ fontSize: "1.2rem", fontWeight: "700" }}
               >
                 {" "}
                 How it works
               </div>
-              <div className="primary_text" style={{ fontSize: "1rem" }}>
+              <div
+                className="primary_text"
+                style={{ fontSize: "1.2rem", fontWeight: "700" }}
+              >
                 Contact us
               </div>
             </div>
@@ -367,7 +325,7 @@ function Navbar() {
               <Link
                 to="/signin"
                 className="primary_text  mx-3 d-md-none link d-lg-flex cursor-pointer"
-                style={{ fontSize: "1rem" }}
+                style={{ fontSize: "1.2rem", fontWeight: "700" }}
               >
                 Login for recruiters
               </Link>
@@ -375,7 +333,12 @@ function Navbar() {
                 to="/login"
                 className="rounded link primary_bg_color py-2 px-4 cursor-pointer text-white"
               >
-                <div className="text-white">Login for closers</div>
+                <div
+                  className="text-white"
+                  style={{ fontSize: "1.2rem", fontWeight: "700" }}
+                >
+                  Login for closers
+                </div>
               </Link>
             </div>
           </div>

@@ -60,7 +60,7 @@ export default function Signup() {
           className="d-none d-md-block"
         >
           <img
-            src="image 27.png"
+            src="figma 1.png"
             alt=""
             className="w-100"
             style={{ height: "100vh" }}
@@ -86,7 +86,7 @@ export default function Signup() {
             <form
               onSubmit={login}
               style={{ marginTop: "20%" }}
-              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5 px-xl-3"
+              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5 px-xl-"
             >
               <div
                 className="black"
@@ -213,7 +213,7 @@ export default function Signup() {
                   fontWeight: "500",
                   color: "background: rgba(44, 82, 130, 1)",
                 }}
-                className="my-3 col-sm-9"
+                className="my-3 col-sm-10"
               >
                 By continuing, you agree to name Terms of Use. Read our Privacy
                 Policy.

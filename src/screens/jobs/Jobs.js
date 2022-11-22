@@ -139,10 +139,10 @@ export default function Jobs() {
         <div className="container-fluid">
           <div className="">
             <div className="modalMargin px-md-5">
-              <div className="container">
+              <div className="">
                 <div
                   style={{ fontSize: "27px", fontWeight: "700" }}
-                  className="primary_color mb-3 mt-5"
+                  className="primary_color mb-3 mt-4"
                 >
                   Find the job you want
                 </div>
@@ -548,7 +548,7 @@ export default function Jobs() {
                 position: "fixed",
                 zIndex: "3",
                 right: "0",
-                top: "55.98px",
+                top: "61.99px",
                 height: "100vh",
                 width: "25%",
               }}

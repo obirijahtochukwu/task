@@ -17,7 +17,7 @@ export default function CreateJob() {
 
   return (
     <article className={`job_search bg-white`}>
-      <div className="container">
+      <div className="container-fluid px-md-5">
         <div className="">
           <div
             className="d-none d-md-block"
@@ -25,7 +25,7 @@ export default function CreateJob() {
               position: "fixed",
               zIndex: "3",
               left: "0",
-              top: "55.98px",
+              top: "61.99px",
               height: "100vh",
               width: "17%",
             }}
@@ -43,7 +43,13 @@ export default function CreateJob() {
                     Create a job
                   </div>
                   <div className="mt-auto pt-5">
-                    <div className="">
+                    <div
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: "400",
+                      }}
+                      className=""
+                    >
                       We recommend using a 200x200 or higher-res square image,
                       such as your Twitter or Facebook avatar
                     </div>
@@ -127,7 +133,7 @@ export default function CreateJob() {
             <section>
               <div className="row">
                 <div className="col-12">
-                  <div className="">Job title*</div>
+                  <div className="black">Job title*</div>
                   <div
                     style={{
                       color: "rgba(223, 225, 230, 1)",
@@ -153,8 +159,8 @@ export default function CreateJob() {
                   return (
                     <div className="col- 12 col-sm-6 my-2">
                       <div
-                        style={{ fontSize: "14px", fontWeight: "500" }}
-                        className=""
+                        style={{ fontSize: "15px", fontWeight: "500" }}
+                        className="black"
                       >
                         {title}
                       </div>
@@ -262,7 +268,10 @@ export default function CreateJob() {
             </div>
 
             <div className="col-md-7 my-3">
-              <div style={{ fontSize: "17px", fontWeight: "500" }} className="">
+              <div
+                style={{ fontSize: "17px", fontWeight: "500" }}
+                className="black"
+              >
                 Email address to receive CV *
               </div>
               <div

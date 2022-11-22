@@ -45,21 +45,12 @@ function SideBar() {
         user.data.email ? "container d-sm-none bg-white" : "container d-md-none"
       }
     >
-      <div className="position-relative d-flex align-items-cen justify-content-between px-2 py-3">
-        <div className="position-relative">
+      <div className="position-relative d-flex align-items-center justify-content-between px-2 py-2">
+        <div className="">
           <img
-            src="./Natural.png"
+            src="./logo intoosales.png"
+            style={{ width: "174px", height: "45px" }}
             className=""
-            width="100px"
-            height="auto"
-            alt=""
-          />
-          <img
-            style={{ bottom: "-40%", left: "0" }}
-            src="closer.png"
-            className=" position-absolute"
-            width="80px"
-            height="auto"
             alt=""
           />
         </div>

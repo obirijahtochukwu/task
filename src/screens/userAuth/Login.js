@@ -50,7 +50,7 @@ export default function Login() {
           className="d-none d-md-block"
         >
           <img
-            src="image 27.png"
+            src="figma 3.png"
             alt=""
             className="w-100"
             style={{ height: "100vh" }}

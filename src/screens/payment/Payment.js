@@ -10,7 +10,7 @@ export default function Payment() {
           position: "fixed",
           zIndex: "3",
           left: "0",
-          top: "55.98px",
+          top: "61.99px",
           height: "100vh",
           width: "15%",
         }}

@@ -17,12 +17,12 @@ export default function Index(params) {
     {
       text: "3456 Jobs Available",
       title: "Outside sales representative",
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "2122 Jobs Available",
       title: "Inside sales representative",
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "2122 Jobs Available",
@@ -31,7 +31,7 @@ export default function Index(params) {
           Sales <div className="mx-3"></div> manager{" "}
         </span>
       ),
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "935 Jobs Available",
@@ -40,7 +40,7 @@ export default function Index(params) {
           Sales <div className="mx-3"></div> manager{" "}
         </span>
       ),
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "2570 Jobs Available",
@@ -49,17 +49,17 @@ export default function Index(params) {
           Director of <div className="mx-5"></div> sales{" "}
         </span>
       ),
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "1485 Jobs Available",
       title: "Regional sales manager ",
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "725 Jobs Available",
       title: "Sales operations manager",
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "1758 Jobs Available",
@@ -69,7 +69,7 @@ export default function Index(params) {
           Sales <div className="mx-3"></div> assistant{" "}
         </span>
       ),
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "2570 Jobs Available",
@@ -78,17 +78,17 @@ export default function Index(params) {
           Director of <div className="mx-5"></div> sales{" "}
         </span>
       ),
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "1485 Jobs Available",
       title: "Regional sales manager",
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "725 Jobs Available",
       title: "Sales operations manager",
-      img: "image 35.png",
+      img: "/flames.png",
     },
     {
       text: "1758 Jobs Available",
@@ -98,7 +98,7 @@ export default function Index(params) {
           Sales <div className="mx-3"></div> assistant{" "}
         </span>
       ),
-      img: "image 35.png",
+      img: "/flames.png",
     },
   ];
 
@@ -125,7 +125,7 @@ export default function Index(params) {
                 fontWeight: "900",
                 color: "##16171C",
               }}
-              className="px-0 mx-0 mb-3"
+              className="px-0 mx-0 mb-2"
             >
               A wide variety of sales jobs are{" "}
               <span className="primary_color">available</span> for you
@@ -144,13 +144,17 @@ export default function Index(params) {
                 someone to fill a sales position within your company.
               </div>
             </div>
-            <div className="d-sm-flex d-block align-items-center my-5 pt-md-3">
+            <div className="d-sm-flex d-block align-items-strect my-5 pt-md-1">
               <Link
                 to="/createaccount"
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}
-                className="primary_bg_color px-3 py-3 rounded my-2 d-flex align-items-center text-white link"
+                className="primary_bg_color px-3 py-3 rounded my-2 my-sm-0 d-flex align-items-center text-white link"
               >
-                <img src="searc 1.png" width="40px" alt="" />
+                <img
+                  src="searc 1.png"
+                  style={{ width: "52.8px", height: "52.84px" }}
+                  alt=""
+                />
                 <div
                   className="text-white mx-2"
                   style={{
@@ -167,7 +171,15 @@ export default function Index(params) {
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}
                 className="rounded d-flex cursor-pointer px-3 py-3 mx-sm-2 align-items-center primary_color link"
               >
-                <img src="image 13.png" width="50px" alt="" />
+                <img
+                  src="search 1.png"
+                  style={{
+                    width: "50.8px",
+                    height: "50.84px",
+                    marginRight: "0.5rem",
+                  }}
+                  alt=""
+                />
                 <div
                   style={{
                     fontSize: "21px",
@@ -175,13 +187,13 @@ export default function Index(params) {
                     fontWeight: "500",
                   }}
                 >
-                  Find a <div className="mx-2"></div> sales job
+                  Find a sales job
                 </div>
               </Link>
             </div>
           </div>
           <div className="col-12 col-md-4 col-lg-5 mx-auto">
-            <img src="./image 32.png" alt="" className="w-100" />
+            <img src="./Untitled design (20).png" alt="" className="w-100" />
           </div>
         </div>
       </div>
@@ -219,7 +231,7 @@ export default function Index(params) {
                   <img
                     src={img}
                     alt=""
-                    className=""
+                    className=" px-0"
                     style={{ width: "72px", height: "52.03px" }}
                   />
                   <div
@@ -355,7 +367,7 @@ export default function Index(params) {
             </div>
           </div>
           <div className="col-12 col-md-10 order-lg-first col-lg-5 my-4 mx-auto  mx-lg-0">
-            <img src="./image 20 (1).png" alt="" className="w-100" />
+            <img src="./Untitled design (18).png" alt="" className="w-100" />
           </div>
           <div className="col-12 col-lg-6 mx-auto mt-lg-5 pt-5 mx-lg-0">
             <div className="primary_color primary_text mb-3">
@@ -391,7 +403,7 @@ export default function Index(params) {
             </div>
           </div>
           <div className="col-12 col-md-10 col-lg-5 mx-auto mt-lg-5 pt-5 py-lg-3 mx-lg-0">
-            <img src="./image 21.png" alt="" className="w-100" />
+            <img src="./Untitled design (19).png" alt="" className="w-100" />
           </div>
         </div>
       </div>
