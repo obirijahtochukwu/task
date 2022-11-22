@@ -56,7 +56,7 @@ export default function CreateAccount() {
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "45%",
+            width: "50%",
             height: "100vh",
           }}
           className=" d-none d-md-block"
@@ -88,7 +88,7 @@ export default function CreateAccount() {
             <form
               onSubmit={Signup}
               style={{ marginTop: "" }}
-              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5"
+              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-4"
             >
               <div
                 className="black"

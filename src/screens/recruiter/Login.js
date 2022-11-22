@@ -42,7 +42,7 @@ export default function Login() {
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "45%",
+            width: "50%",
             height: "100vh",
           }}
           className=" d-none d-md-block"

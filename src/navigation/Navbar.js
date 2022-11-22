@@ -197,7 +197,7 @@ function Navbar() {
                     }}
                     className="rounded mx-2 white px-3 py-2 cursor-pointer"
                   >
-                    Post a Job*
+                    Post a Job
                   </div>
                   <Link
                     to="/recruiter-profile"

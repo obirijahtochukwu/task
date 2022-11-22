@@ -54,7 +54,7 @@ export default function Signup() {
             zIndex: "2",
             top: "0",
             left: "0",
-            width: "45%",
+            width: "50%",
             height: "100vh",
           }}
           className="d-none d-md-block"
@@ -86,7 +86,7 @@ export default function Signup() {
             <form
               onSubmit={login}
               style={{ marginTop: "20%" }}
-              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-5 px-xl-"
+              className="mx-auto mb-4 mt-4 pt-md-4 mx-xl-4 px-xl-"
             >
               <div
                 className="black"
