@@ -13,7 +13,7 @@ function Index() {
         <div className="margin pb-md-5 pt-4">
           <div className="row justify-content-center">
             <div
-              className={`${job && "d-none"} py-4 mb-md-5 col-lg-10`}
+              className={`${job && "d-none"} py-4 mb-md-5 col-lg-11`}
               style={{ bottom: "0" }}
             >
               <div className="d-flex justify-content-between align-items-center">

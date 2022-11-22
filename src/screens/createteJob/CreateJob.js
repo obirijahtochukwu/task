@@ -30,7 +30,7 @@ export default function CreateJob() {
               width: "17%",
             }}
           >
-            <img src="./image 30.png" alt="" className="w-100 h-100" />
+            <img src="./figma 4.png" alt="" className="w-100 h-100" />
           </div>
           <div className="job-margin mb-5 mt-4">
             <div className="d-flex justify-content-between align-items-stretch">
@@ -48,7 +48,7 @@ export default function CreateJob() {
                         fontSize: "14px",
                         fontWeight: "400",
                       }}
-                      className=""
+                      className="pr-lg-2"
                     >
                       We recommend using a 200x200 or higher-res square image,
                       such as your Twitter or Facebook avatar
@@ -89,11 +89,11 @@ export default function CreateJob() {
                     paddingRight: "8px",
                     paddingLeft: "24px",
                   }}
-                  className="rounded py-4"
+                  className="rounded pb-4 pt-2"
                 >
                   <div
                     style={{ fontSize: "1.3rem", fontWeight: "700" }}
-                    className=""
+                    className="mb-3"
                   >
                     Tips
                   </div>
@@ -133,7 +133,12 @@ export default function CreateJob() {
             <section>
               <div className="row">
                 <div className="col-12">
-                  <div className="black">Job title*</div>
+                  <div
+                    style={{ fontSize: "14px", fontWeight: "500" }}
+                    className="black"
+                  >
+                    Job title*
+                  </div>
                   <div
                     style={{
                       color: "rgba(223, 225, 230, 1)",
@@ -298,10 +303,13 @@ export default function CreateJob() {
                   to="/payment"
                   className="rounded cursor-pointer primary_bg_color link"
                 >
-                  <div className="d-flex align-items-stretch text-white px-4 py-2">
+                  <div
+                    className="d-flex align-items-stretch text-white px-4"
+                    style={{ paddingTop: "9.5px", paddingBottom: "9.5px" }}
+                  >
                     <div
                       className="white "
-                      style={{ fontSize: "0.87rem", fontWeight: "500" }}
+                      style={{ fontSize: "14px", fontWeight: "500" }}
                     >
                       NEXT
                     </div>
@@ -313,11 +321,14 @@ export default function CreateJob() {
                     className="d-flex align-items-center text-white px-2 py-2 link"
                   >
                     <div>
-                      <FaEye className="mx-2" />{" "}
+                      <FaEye
+                        className="mx-1"
+                        style={{ width: "18.73px", height: "14.01px" }}
+                      />{" "}
                     </div>
                     <div
                       className=""
-                      style={{ fontSize: "0.87rem", fontWeight: "500" }}
+                      style={{ fontSize: "14px", fontWeight: "500" }}
                     >
                       Preview Job
                     </div>

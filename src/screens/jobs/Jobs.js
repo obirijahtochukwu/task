@@ -554,7 +554,7 @@ export default function Jobs() {
               }}
               className=" d-none d-md-block"
             >
-              <img src="./image 30.png" alt="" className="w-100 h-100" />
+              <img src="./figma 4.png" alt="" className="w-100 h-100" />
             </div>
           </div>
         </div>

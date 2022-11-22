@@ -124,6 +124,7 @@ export default function Index(params) {
                 fontSize: "43px",
                 fontWeight: "900",
                 color: "##16171C",
+                lineHeight: "110%",
               }}
               className="px-0 mx-0 mb-2"
             >
@@ -144,7 +145,7 @@ export default function Index(params) {
                 someone to fill a sales position within your company.
               </div>
             </div>
-            <div className="d-sm-flex d-block align-items-strect my-5 pt-md-1">
+            <div className="d-sm-flex d-block align-items-strect my-5 pt-md-4">
               <Link
                 to="/createaccount"
                 style={{ border: "0.1rem solid #4897d8", width: "200px" }}

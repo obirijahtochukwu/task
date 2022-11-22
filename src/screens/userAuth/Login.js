@@ -50,10 +50,10 @@ export default function Login() {
           className="d-none d-md-block"
         >
           <img
-            src="figma 3.png"
+            src="figma 1.png"
             alt=""
             className="w-100"
-            style={{ height: "100vh" }}
+            style={{ height: "100%", objectFit: "cover" }}
           />
         </div>
         <div className="container">
