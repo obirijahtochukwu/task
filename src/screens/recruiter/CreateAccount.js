@@ -62,7 +62,7 @@ export default function CreateAccount() {
           className=" d-none d-md-block"
         >
           <img
-            src="figma 4.png"
+            src="figma 2.png"
             alt=""
             className="w-100 "
             style={{ height: "100%", objectFit: "cover" }}
