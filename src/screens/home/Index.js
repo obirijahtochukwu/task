@@ -117,7 +117,7 @@ export default function Index(params) {
   return (
     <article>
       <div className="container">
-        <div className="row align-items-end my-5 bg-success  py-1">
+        <div className="row align-items-end my-5  py-1">
           <div className="col-12 col-md-8 col-lg-7">
             <div
               style={{
