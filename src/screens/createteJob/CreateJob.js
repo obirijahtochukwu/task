@@ -134,30 +134,25 @@ export default function CreateJob() {
               <div className="row">
                 <div className="col-12">
                   <div
-                    style={{ fontSize: "14px", fontWeight: "500" }}
+                    style={{ fontSize: "15px", fontWeight: "500" }}
                     className="black"
                   >
                     Job title*
                   </div>
-                  <div
+                  <input
+                    type="text"
+                    placeholder="Write the best headline for your job"
                     style={{
-                      color: "rgba(223, 225, 230, 1)",
+                      color: "rgba(124, 146, 166, 1)",
                       background: "#F4F5F7",
                       border: "2px solid #DFE1E6",
+                      fontSize: "0.87rem",
+                      fontWeight: "500",
                     }}
-                    className="rounded my-1 py-2 px-2 cursor-pointer"
-                  >
-                    <div
-                      style={{
-                        fontSize: "0.87rem",
-                        color: "#6B778C",
-                        fontWeight: "400",
-                      }}
-                      className=""
-                    >
-                      Write the best headline for your job
-                    </div>
-                  </div>
+                    className="rounded my-1 py-2 px-3 cursor-pointer w-100"
+                    required
+                    autoFocus
+                  />
                 </div>
 
                 {infos.map(({ title, text }, index) => {
@@ -279,25 +274,20 @@ export default function CreateJob() {
               >
                 Email address to receive CV *
               </div>
-              <div
+              <input
+                type="text"
+                placeholder="Your Best Email"
                 style={{
-                  color: "rgba(223, 225, 230, 1)",
+                  color: "rgba(124, 146, 166, 1)",
                   background: "#F4F5F7",
                   border: "2px solid #DFE1E6",
+                  fontSize: "0.87rem",
+                  fontWeight: "500",
                 }}
-                className="rounded my-1 py-2 px-3 cursor-pointer"
-              >
-                <div
-                  style={{
-                    fontSize: "0.87rem",
-                    color: "#6B778C",
-                    fontWeight: "400",
-                  }}
-                  className=""
-                >
-                  Your Best Email
-                </div>
-              </div>
+                className="rounded my-1 py-2 px-3 cursor-pointer w-100"
+                required
+                autoFocus
+              />
               <div className="d-flex align-items-center mt-3">
                 <Link
                   to="/payment"

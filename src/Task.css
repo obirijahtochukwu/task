@@ -1,0 +1,29 @@
+.v {
+  transform: translate(0%) !important;
+  opacity: 1 !important;
+}
+.n {
+  opacity: 0;
+
+  position: fixed;
+  z-index: -1;
+  transform: translate(0%);
+  transition: all 0.5s ease-in;
+}
+
+.header {
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 45%;
+  bottom: auto;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.center.show {
+  top: 30%;
+  opacity: 1;
+}
