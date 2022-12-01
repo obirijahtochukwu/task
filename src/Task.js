@@ -12,9 +12,13 @@ export default function Task() {
     }
   };
   useEffect(() => {
-    setInterval(() => {
+    const mugu = setInterval(() => {
       forward();
     }, 6000);
+
+    return () => {
+      clearInterval(mugu);
+    };
     // eslint-disable-next-line
   }, [active]);
 
@@ -44,26 +48,42 @@ export default function Task() {
                 style={{ transform: `${index < active && "translte(100%)"}` }}
               >
                 <div className="header">
-                  <video
-                    className="w-100"
-                    src={url}
-                    loop
-                    autoPlay={"autoplay"}
-                    preload="auto"
-                  ></video>
-                </div>
-                <div
-                  className={`${
-                    index === active && " show"
-                  } center text-center text-white mx-auto row`}
-                >
-                  <div className="col-md-6 mx-auto">
-                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                    <h5 className="text-center">
-                      adipisicing elit. Unde reprehenderit quos provident ipsum.
-                      Suscipit inventore tenetur magnam incidunt repellendus
-                      error?
-                    </h5>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "80vh",
+                      overflow: "hidden",
+                    }}
+                    className=""
+                  >
+                    <video
+                      className="w-100"
+                      src={url}
+                      style={{
+                        transform: `${
+                          (index === 1 && "scale(2.5),") ||
+                          (index === 0 && "scale(0.6),")
+                        }`,
+                      }}
+                      loop
+                      muted
+                      autoPlay={"autoplay"}
+                      preload="auto"
+                    ></video>
+                  </div>
+                  <div
+                    className={`${
+                      index === active && " show"
+                    } center text-center text-white mx-auto row`}
+                  >
+                    <div className="col-md-6 mx-auto">
+                      <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                      <h5 className="text-center">
+                        adipisicing elit. Unde reprehenderit quos provident
+                        ipsum. Suscipit inventore tenetur magnam incidunt
+                        repellendus error?
+                      </h5>
+                    </div>
                   </div>
                 </div>
               </div>
