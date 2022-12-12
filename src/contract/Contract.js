@@ -133,7 +133,7 @@ export default function Contract() {
               <div className="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                 <div
                   style={{ boxShadow: "0 2px 4px 0.3px rgba(0,0,0, .2)" }}
-                  className={`${css} w-100 pt-5 rounded position-relative`}
+                  className={`${css} w-100 pt-5 rounded position-relative h-100`}
                 >
                   <img
                     src={img}
