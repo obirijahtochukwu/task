@@ -133,20 +133,35 @@ export default function Contract() {
               <div className="col-6 col-sm-4 col-md-3 col-xl-2 mb-3">
                 <div
                   style={{ boxShadow: "0 2px 4px 0.3px rgba(0,0,0, .2)" }}
-                  className={`${css} w-100 pt-5 rounded position-relative h-100`}
+                  className={` h-100 bg-white rounded`}
                 >
-                  <img
-                    src={img}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "120px",
-                      objectFit: "contain",
-                    }}
-                  />
+                  <div
+                    style={{ borderRadius: "6px 6px 0 0" }}
+                    className={`${css} w-100 pt-5 position-relative h`}
+                  >
+                    <img
+                      src={img}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "120px",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <div className="position-absolute pt-1 mx-2">
+                      <div
+                        style={{ fontSize: "0.8rem", color: "rgba(0,0,0, .5)" }}
+                        className="d-flex align-items-center"
+                      >
+                        <FaRegHeart /> <div className="mx-1">88</div>
+                        <FaRegEye style={{ marginLeft: "4px" }} />{" "}
+                        <div className="mx-1">2.2k</div>
+                      </div>
+                    </div>
+                  </div>
                   <div
                     style={{ borderRadius: "0 0 6px 6px" }}
-                    className="bg-white px-3 py-2"
+                    className="bg-white px-3 py-2 h-1"
                   >
                     <div className="d-flex justify-content-between align-items-center">
                       <div
@@ -182,16 +197,6 @@ export default function Contract() {
                       className=""
                     >
                       {txt}
-                    </div>
-                  </div>
-                  <div className="position-absolute pt-1 mx-2">
-                    <div
-                      style={{ fontSize: "0.8rem", color: "rgba(0,0,0, .5)" }}
-                      className="d-flex align-items-center"
-                    >
-                      <FaRegHeart /> <div className="mx-1">88</div>
-                      <FaRegEye style={{ marginLeft: "4px" }} />{" "}
-                      <div className="mx-1">2.2k</div>
                     </div>
                   </div>
                 </div>
