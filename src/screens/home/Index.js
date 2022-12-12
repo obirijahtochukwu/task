@@ -2,14 +2,12 @@ import { Navigate, Link } from "react-router-dom";
 import "./Index.css";
 import { useGlobalContext } from "../../context";
 import {
-  FaArrowLeft,
-  FaArrowRight,
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
-
+import Carousel from "react-elastic-carousel";
 export default function Index(params) {
   const user = useGlobalContext();
 
@@ -108,6 +106,13 @@ export default function Index(params) {
     { icon: "image 38 (2).png", text: "Education" },
     { icon: "image 38 (3).png", text: "High Tech" },
     { icon: "image 38 (4).png", text: "Health" },
+  ];
+
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2 },
+    { width: 768, itemsToShow: 4 },
+    { width: 1200, itemsToShow: 5 },
   ];
 
   if (user.data.email) {
@@ -278,55 +283,30 @@ export default function Index(params) {
             Choose Your Industry
           </div>
           <div className="row align-items-center justify-content-between">
-            <div
-              style={{
-                background: "rgba(180, 206, 226, 1)",
-                borderRadius: "100%",
-                width: "60.32px",
-                height: "60.32px",
-                fontSize: "1.7rem",
-              }}
-              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-lg-flex justify-content-center align-items-center white d-none"
-            >
-              <FaArrowLeft />
-            </div>
-            {icons.map(({ icon, text }, index) => {
-              return (
-                <div
-                  key={index}
-                  className="col-5 col-md-3 col-lg-2 mx-auto mt-3"
-                >
-                  <div className="d-flex justify-content-center">
-                    <img
-                      src={icon}
-                      alt=""
-                      className=""
-                      width="70.32px"
-                      height="70.32px"
-                    />
-                  </div>
+            <Carousel breakPoints={breakPoints}>
+              {icons.map(({ icon, text }, index) => {
+                return (
+                  <div key={index} className="">
+                    <div className="d-flex justify-content-center">
+                      <img
+                        src={icon}
+                        alt=""
+                        className=""
+                        width="70.32px"
+                        height="70.32px"
+                      />
+                    </div>
 
-                  <div
-                    className="primary_color text-center"
-                    style={{ fontSize: "1.3rem", fontWeight: "700" }}
-                  >
-                    {text}
+                    <div
+                      className="primary_color text-center"
+                      style={{ fontSize: "1.3rem", fontWeight: "700" }}
+                    >
+                      {text}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-            <div
-              style={{
-                background: "rgba(180, 206, 226, 1)",
-                borderRadius: "100%",
-                width: "60.32px",
-                height: "60.32px",
-                fontSize: "1.7rem",
-              }}
-              className="col-5 col-md-3 col-lg-1 mx-auto mt-3 d-lg-flex justify-content-center align-items-center white d-none"
-            >
-              <FaArrowRight />
-            </div>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
       </div>

@@ -1,0 +1,21 @@
+._carousel.show {
+  background-color: green;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+._carousel {
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.gg {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: fit-content;
+  transform: translateX(-233.93px);
+}

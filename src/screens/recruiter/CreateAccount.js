@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./Index.css";
+import axios from "axios";
 
 export default function CreateAccount() {
   const user = useGlobalContext();
@@ -15,6 +16,7 @@ export default function CreateAccount() {
   const [address, setAddress] = useState("");
   const [company, setCompany] = useState("");
   const [password, setPassword] = useState("");
+  const [passWord, setPassWord] = useState("");
   // eslint-disable-next-line
   const [type, setType] = useState("recruiter");
   const [success, setSuccess] = useState(false);
@@ -22,16 +24,35 @@ export default function CreateAccount() {
   const Signup = (e) => {
     e.preventDefault();
     const data = { name, phone, email, address, company, password, type };
-    localStorage.setItem("auth", JSON.stringify(data));
-    user.setData(data);
-    setName("");
-    setPhone("");
-    setEmail("");
-    setAddress("");
-    setEmail("");
-    setCompany("");
-    setPassword("");
-    setSuccess(true);
+    axios
+      .post(
+        "http://103.204.131.57/api/registration/recruiter/",
+        {
+          username: name,
+          name,
+          phone,
+          email,
+          address,
+          company_name: company,
+          password1: password,
+          password2: passWord,
+        },
+        {}
+      )
+      .then((res) => {
+        localStorage.setItem("auth", JSON.stringify(data));
+        user.setData(data);
+        setName("");
+        setPhone("");
+        setEmail("");
+        setAddress("");
+        setEmail("");
+        setCompany("");
+        setPassword("");
+        setSuccess(true);
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -210,6 +231,33 @@ export default function CreateAccount() {
                 <input
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  type={show ? "text" : "password"}
+                  placeholder="Enter your password"
+                  style={{
+                    color: "rgba(124, 146, 166, 1)",
+                    fontSize: "0.87rem",
+                    fontWeight: "500",
+                  }}
+                  required
+                  className=" py-2 px-3 login_input"
+                />
+                <div
+                  onClick={() => setShow(!show)}
+                  className="show_password px-1"
+                >
+                  {show ? "Hide" : "Show"}
+                </div>
+              </div>
+              <div
+                style={{ fontSize: "1rem", fontWeight: "500" }}
+                className="mt-4"
+              >
+                Password*
+              </div>
+              <div className="position-relative">
+                <input
+                  value={passWord}
+                  onChange={(e) => setPassWord(e.target.value)}
                   type={show ? "text" : "password"}
                   placeholder="Enter your password"
                   style={{

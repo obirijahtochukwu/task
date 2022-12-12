@@ -4,25 +4,52 @@
 }
 .n {
   opacity: 0;
-
   position: fixed;
   z-index: -1;
   transform: translate(0%);
   transition: all 0.5s ease-in;
 }
-
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 80vh;
+}
 .header {
   position: relative;
 }
-
 .center {
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 45%;
-  bottom: auto;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
+  top: 0 !important;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
-.center.show {
-  top: 30%;
+.col-m {
+  transform: translateY(60%);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+
+.col-m.show {
+  transform: translateY(0%);
   opacity: 1;
+  z-index: 1;
+}
+
+.div {
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  min-height: 500vh;
 }

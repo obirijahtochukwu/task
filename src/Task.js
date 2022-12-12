@@ -36,9 +36,32 @@ export default function Task() {
       text: "lorrrrrrrrr",
     },
   ];
+  const vp = document.querySelector("html");
+  const scrollY = document.getElementById("div");
+  scrollY.addEventListener("scroll", (event) => {
+    setActive(scrollY.scrollTop);
+  });
   return (
     <div>
-      <div className="container-fluid px-0   overflow-hdden">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus magni
+      vitae error aliquid alias repudiandae expedita voluptatem labore porro
+      nobis dolore doloremque quam cum eius natus rem, a quibusdam itaque.
+      <div
+        style={{
+          transform: `rotte(${active * -20}deg)`,
+          overflow: "scroll",
+          width: "150px",
+          height: "150px",
+        }}
+        id="div"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam porro
+        incidunt cupiditate illo, velit assumenda facere omnis culpa accusamus
+        saepe commodi reiciendis repellendus pariatur quidem ullam debitis qui
+        doloribus eum.
+      </div>
+      {active}
+      <div className="container-fluid px-0 d-none">
         <div className="d-flex">
           {lists.map(({ url }, index) => {
             return (
@@ -47,42 +70,58 @@ export default function Task() {
                 className={`${index === active && " v"} w-100 n col-12`}
                 style={{ transform: `${index < active && "translte(100%)"}` }}
               >
-                <div className="header">
-                  <div
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    overflow: "hidden",
+                  }}
+                  className="header"
+                >
+                  <video
+                    src={url}
                     style={{
-                      width: "100%",
-                      height: "80vh",
-                      overflow: "hidden",
+                      transform: `${
+                        (index === 1 && "scale(2.5),") ||
+                        (index === 0 && "scale(0.6),")
+                      }`,
                     }}
-                    className=""
-                  >
-                    <video
-                      className="w-100"
-                      src={url}
-                      style={{
-                        transform: `${
-                          (index === 1 && "scale(2.5),") ||
-                          (index === 0 && "scale(0.6),")
-                        }`,
-                      }}
-                      loop
-                      muted
-                      autoPlay={"autoplay"}
-                      preload="auto"
-                    ></video>
-                  </div>
+                    loop
+                    muted
+                    autoPlay={"autoplay"}
+                    preload="auto"
+                  ></video>
                   <div
                     className={`${
                       index === active && " show"
-                    } center text-center text-white mx-auto row`}
+                    } center text- text-white mx-auto row`}
                   >
-                    <div className="col-md-6 mx-auto">
-                      <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                      <h5 className="text-center">
-                        adipisicing elit. Unde reprehenderit quos provident
-                        ipsum. Suscipit inventore tenetur magnam incidunt
-                        repellendus error?
-                      </h5>
+                    <div className="d-flex justify-content-center align-items-center">
+                      <div
+                        className={`${
+                          index === active && " show"
+                        } col-m mx-auto text-center`}
+                      >
+                        <h2
+                          style={{
+                            fontSize: "70px",
+                            fontWeight: "lighter",
+                            fontFamily: "serif",
+                          }}
+                        >
+                          How we create 360° Value
+                        </h2>
+                        <h5
+                          style={{
+                            fontSize: "1.8rem",
+                            fontWeight: "lighter",
+                            textShadow: "1px 1px 3px #4a4a4a",
+                          }}
+                          className="text"
+                        >
+                          adipisicing elit. Unde reprehenderit quos provident i
+                        </h5>
+                      </div>
                     </div>
                   </div>
                 </div>

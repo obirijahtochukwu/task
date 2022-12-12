@@ -48,7 +48,7 @@ function SideBar() {
       <div className="position-relative d-flex align-items-center justify-content-between px-2 py-2">
         <div className="">
           <img
-            src="./logo intoosales.png"
+            src="./into sales.png"
             style={{ width: "174px", height: "45px" }}
             className=""
             alt=""

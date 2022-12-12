@@ -54,7 +54,7 @@ function Navbar() {
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <img
-                  src="./logo intoosales.png"
+                  src="./into sales.png"
                   style={{ width: "174px", height: "45px" }}
                   className=""
                   alt=""
@@ -180,7 +180,7 @@ function Navbar() {
             <div className="col-12 mx-auto">
               <div className="d-flex justify-content-between align-items-center">
                 <img
-                  src="./logo intoosales.png"
+                  src="./into sales.png"
                   style={{ width: "174px", height: "45px" }}
                   className=""
                   alt=""
@@ -292,7 +292,7 @@ function Navbar() {
       <div className="row align-items-center justify-content-between px-2">
         <div className="col-md-2 col-xl-2">
           <img
-            src="./logo intoosales.png"
+            src="./into sales.png"
             style={{ width: "174px", height: "45px" }}
             className=""
             alt=""
