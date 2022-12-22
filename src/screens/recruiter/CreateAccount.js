@@ -28,16 +28,18 @@ export default function CreateAccount() {
       .post(
         "http://103.204.131.57/api/registration/recruiter/",
         {
-          username: name,
-          name,
-          phone,
-          email,
-          address,
+          //username: name,
+          name: name,
+          phone: "jjjjjj",
+          email: email,
+          address: address,
           company_name: company,
           password1: password,
           password2: passWord,
         },
-        {}
+        {
+          withCredentials: true,
+        }
       )
       .then((res) => {
         localStorage.setItem("auth", JSON.stringify(data));

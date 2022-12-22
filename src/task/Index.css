@@ -1,0 +1,28 @@
+._badge {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgba(29, 88, 252, 0.2);
+  border-radius: 8px;
+  border: 2px solid rgba(29, 88, 252, 0.2);
+}
+
+.bg- {
+  color: white;
+  background-color: blue;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.all {
+  color: white;
+  background-color: blue;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.rounded {
+  border-radius: 15px !important;
+}
