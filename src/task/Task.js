@@ -6,7 +6,7 @@ export default function Task() {
   return (
     <div className="container-fluid bg-white pt-5 pb-5">
       <div className="row justify-content-center">
-        <div className="col-9 col-md-5 col-lg-5 col-xl-4 mt-3">
+        <div className="col-11 col-sm-9 col-md-5 col-lg-5 col-xl-4 mt-3">
           <div
             style={{ boxShadow: "0 0 15px 3px rgba(0, 0, 0, .2)" }}
             className="rounded w-100 h-100 pb-4 px-3 pt-3"
@@ -48,7 +48,7 @@ export default function Task() {
             </div>
           </div>
         </div>
-        <div className="col-9 col-md-5 col-lg-5 col-xl-4 mt-3">
+        <div className="col-11 col-sm-9 col-md-5 col-lg-5 col-xl-4 mt-3">
           <div
             style={{ boxShadow: "0 0 15px 3px rgba(0, 0, 0, .2)" }}
             className="rounded w-100 h-100 pb-4 px-3 pt-3"
