@@ -34,7 +34,7 @@ export default function Task() {
   return (
     <div className="container-fluid bg-white pt-5 pb-5">
       <div className="row">
-        <div className="col-11 col-sm-8 col-md-5 col-lg-4 mx-auto">
+        <div className="col-12 col-sm-8 col-md-5 col-lg-4 mx-auto">
           <div className="d-flex justify-content-center align-items-center mb-5">
             <FaEdgeLegacy className="logo" />
             <div className="text-center logo-text mx-1">Eden</div>
