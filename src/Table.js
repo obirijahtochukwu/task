@@ -13,8 +13,7 @@ export default function Table() {
   }, [y, x])
   
   return (
-    <div className="container bg-s" style={{backgroundImage: `url(/bg.png)`, x: '90px', y: '0px'}}>
-      <h1>Ns</h1>
+    <div className="bg2 bg-s" style={{backgroundImage: `url(/bg.png)`, x: '90px', y: '0px'}}>
       <div className="bg bg-s" style={{backgroundImage: `url(/bg2.png)`, webkitMaskImage: `radial-gradient(200px at ${x}px ${y}px, transparent 50%, black 100%)`}}></div>
     </div>
   )
